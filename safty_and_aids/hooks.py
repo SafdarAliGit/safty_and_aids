@@ -215,3 +215,4 @@ app_license = "MIT"
 # auth_hooks = [
 #	"safty_and_aids.auth.validate"
 # ]
+required_apps = ['erpnext']
