@@ -215,4 +215,7 @@ app_license = "MIT"
 # auth_hooks = [
 #	"safty_and_aids.auth.validate"
 # ]
+doctype_js = {
+	"Lead" : "public/lead.js",
+}
 required_apps = ['erpnext']
