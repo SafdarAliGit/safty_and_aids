@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include safty_and_aids *.css
+recursive-include safty_and_aids *.csv
+recursive-include safty_and_aids *.html
+recursive-include safty_and_aids *.ico
+recursive-include safty_and_aids *.js
+recursive-include safty_and_aids *.json
+recursive-include safty_and_aids *.md
+recursive-include safty_and_aids *.png
+recursive-include safty_and_aids *.py
+recursive-include safty_and_aids *.svg
+recursive-include safty_and_aids *.txt
+recursive-exclude safty_and_aids *.pyc

@@ -1,0 +1,62 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-06-29 16:25:19.105185",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "activities",
+  "y",
+  "n",
+  "na",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "activities",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Activities"
+  },
+  {
+   "default": "0",
+   "fieldname": "y",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Y"
+  },
+  {
+   "default": "0",
+   "fieldname": "n",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "N"
+  },
+  {
+   "default": "0",
+   "fieldname": "na",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "N/A"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-06-29 16:38:08.738967",
+ "modified_by": "Administrator",
+ "module": "Safty And Aids",
+ "name": "Maintenance Visit Items",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
