@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:activities",
  "creation": "2024-06-29 16:48:57.625874",
@@ -33,7 +34,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-29 17:12:44.396518",
+ "modified": "2024-07-03 11:24:19.115283",
  "modified_by": "Administrator",
  "module": "Safty And Aids",
  "name": "Maintenance Visit Template",

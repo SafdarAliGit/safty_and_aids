@@ -217,6 +217,7 @@ app_license = "MIT"
 # ]
 doctype_js = {
 	"Lead" : "public/lead.js",
-	"Maintenance Visit" : "public/maintenance_isit.js"
+	"Maintenance Visit" : "public/maintenance_isit.js",
+	"Quotation" : "public/quotation.js"
 }
 required_apps = ['erpnext']
