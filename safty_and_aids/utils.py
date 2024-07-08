@@ -31,3 +31,18 @@ def fetch_product_bundle_count(**args):
         return {
             "pb_count": 1,
         }
+
+
+@frappe.whitelist()
+def get_total_from_quotation(**args):
+    id = args.get('id')
+    q = frappe.get_doc("Quotation", id)
+    if q:
+        return {
+            "total": q.total,
+        }
+
+    else:
+        return {
+            "total": 0,
+        }
