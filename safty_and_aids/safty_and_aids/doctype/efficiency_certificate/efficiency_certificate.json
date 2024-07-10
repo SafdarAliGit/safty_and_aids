@@ -1,0 +1,108 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "EC-.#####",
+ "creation": "2024-07-10 08:34:30.937076",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "amended_from",
+  "customer",
+  "add",
+  "column_break_0qkl",
+  "document_type",
+  "document_no",
+  "section_break_devy",
+  "efficiency_certificate_items",
+  "company"
+ ],
+ "fields": [
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Efficiency Certificate",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "add",
+   "fieldtype": "Data",
+   "label": "Add"
+  },
+  {
+   "fieldname": "column_break_0qkl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_devy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "efficiency_certificate_items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Efficiency Certificate Items"
+  },
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Link",
+   "label": "Document Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "document_no",
+   "fieldtype": "Dynamic Link",
+   "label": "Document No",
+   "options": "document_type"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-07-10 09:39:21.866572",
+ "modified_by": "Administrator",
+ "module": "Safty And Aids",
+ "name": "Efficiency Certificate",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
