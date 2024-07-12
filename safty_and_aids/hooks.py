@@ -213,6 +213,9 @@ doc_events = {
 # auth_hooks = [
 #	"safty_and_aids.auth.validate"
 # ]
+web_include_css = [
+    "/assets/safty_and_aids/css/login.css"
+]
 doctype_js = {
 	"Lead" : "public/lead.js",
 	"Maintenance Visit" : "public/maintenance_isit.js",
