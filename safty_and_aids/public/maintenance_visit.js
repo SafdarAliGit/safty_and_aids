@@ -1,23 +1,23 @@
 frappe.ui.form.on('Maintenance Visit', {
     refresh(frm) {
-        if(frm.doc.purposes.length == 0){
-                frm.fields_dict['custom_clean_agent'].df.hidden = true;
-                frm.fields_dict['custom_application'].df.hidden = true;
-                frm.fields_dict['custom_type_of_detection'].df.hidden = true;
-                frm.refresh_field('custom_clean_agent');
-                frm.refresh_field('custom_application');
-                frm.refresh_field('custom_type_of_detection');
+        if (frm.doc.purposes.length == 0) {
+            frm.fields_dict['custom_clean_agent'].df.hidden = true;
+            frm.fields_dict['custom_application'].df.hidden = true;
+            frm.fields_dict['custom_type_of_detection'].df.hidden = true;
+            frm.refresh_field('custom_clean_agent');
+            frm.refresh_field('custom_application');
+            frm.refresh_field('custom_type_of_detection');
 
-                frm.fields_dict['custom_type_of_operation'].df.hidden = true;
-                frm.fields_dict['custom_water_supply_source'].df.hidden = true;
-                frm.fields_dict['custom_water_tank'].df.hidden = true;
-                frm.fields_dict['custom_type_of_water'].df.hidden = true;
-                frm.refresh_field('custom_type_of_operation');
-                frm.refresh_field('custom_water_supply_source');
-                frm.refresh_field('custom_water_tank');
-                frm.refresh_field('custom_type_of_water');
-        }
-        frm.refresh_field('purposes');
+            frm.fields_dict['custom_type_of_operation'].df.hidden = true;
+            frm.fields_dict['custom_water_supply_source'].df.hidden = true;
+            frm.fields_dict['custom_water_tank'].df.hidden = true;
+            frm.fields_dict['custom_type_of_water'].df.hidden = true;
+            frm.refresh_field('custom_type_of_operation');
+            frm.refresh_field('custom_water_supply_source');
+            frm.refresh_field('custom_water_tank');
+            frm.refresh_field('custom_type_of_water');
+        } else {
+            frm.refresh_field('purposes');
 
             if (frm.doc.purposes.item_code != 'Fire Suppression System') {
                 frm.fields_dict['custom_clean_agent'].df.hidden = true;
@@ -34,7 +34,7 @@ frappe.ui.form.on('Maintenance Visit', {
                 frm.refresh_field('custom_application');
                 frm.refresh_field('custom_type_of_detection');
             }
-              if (frm.doc.purposes.item_code == 'Fire Suppression System') {
+            if (frm.doc.purposes.item_code == 'Fire Suppression System') {
                 frm.fields_dict['custom_type_of_operation'].df.hidden = true;
                 frm.fields_dict['custom_water_supply_source'].df.hidden = true;
                 frm.fields_dict['custom_water_tank'].df.hidden = true;
@@ -53,6 +53,8 @@ frappe.ui.form.on('Maintenance Visit', {
                 frm.refresh_field('custom_water_tank');
                 frm.refresh_field('custom_type_of_water');
             }
+        }
+
     },
 
 
@@ -100,7 +102,7 @@ frappe.ui.form.on('Maintenance Visit Purpose', {
                 frm.refresh_field('custom_application');
                 frm.refresh_field('custom_type_of_detection');
             }
-              if (row.item_code == 'Fire Suppression System') {
+            if (row.item_code == 'Fire Suppression System') {
                 frm.fields_dict['custom_type_of_operation'].df.hidden = true;
                 frm.fields_dict['custom_water_supply_source'].df.hidden = true;
                 frm.fields_dict['custom_water_tank'].df.hidden = true;
