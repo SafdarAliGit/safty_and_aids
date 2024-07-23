@@ -17,7 +17,42 @@ frappe.ui.form.on('Maintenance Visit', {
                 frm.refresh_field('custom_water_tank');
                 frm.refresh_field('custom_type_of_water');
         }
+        frm.refresh_field('purposes');
 
+            if (frm.doc.purposes.item_code != 'Fire Suppression System') {
+                frm.fields_dict['custom_clean_agent'].df.hidden = true;
+                frm.fields_dict['custom_application'].df.hidden = true;
+                frm.fields_dict['custom_type_of_detection'].df.hidden = true;
+                frm.refresh_field('custom_clean_agent');
+                frm.refresh_field('custom_application');
+                frm.refresh_field('custom_type_of_detection');
+            } else {
+                frm.fields_dict['custom_clean_agent'].df.hidden = false;
+                frm.fields_dict['custom_application'].df.hidden = false;
+                frm.fields_dict['custom_type_of_detection'].df.hidden = false;
+                frm.refresh_field('custom_clean_agent');
+                frm.refresh_field('custom_application');
+                frm.refresh_field('custom_type_of_detection');
+            }
+              if (frm.doc.purposes.item_code == 'Fire Suppression System') {
+                frm.fields_dict['custom_type_of_operation'].df.hidden = true;
+                frm.fields_dict['custom_water_supply_source'].df.hidden = true;
+                frm.fields_dict['custom_water_tank'].df.hidden = true;
+                frm.fields_dict['custom_type_of_water'].df.hidden = true;
+                frm.refresh_field('custom_type_of_operation');
+                frm.refresh_field('custom_water_supply_source');
+                frm.refresh_field('custom_water_tank');
+                frm.refresh_field('custom_type_of_water');
+            } else {
+                frm.fields_dict['custom_type_of_operation'].df.hidden = false;
+                frm.fields_dict['custom_water_supply_source'].df.hidden = false;
+                frm.fields_dict['custom_water_tank'].df.hidden = false;
+                frm.fields_dict['custom_type_of_water'].df.hidden = false;
+                frm.refresh_field('custom_type_of_operation');
+                frm.refresh_field('custom_water_supply_source');
+                frm.refresh_field('custom_water_tank');
+                frm.refresh_field('custom_type_of_water');
+            }
     },
 
 
