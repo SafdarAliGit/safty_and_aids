@@ -218,7 +218,7 @@ web_include_css = [
 ]
 doctype_js = {
 	"Lead" : "public/lead.js",
-	"Maintenance Visit" : "public/maintenance_isit.js",
+	"Maintenance Visit" : "public/maintenance_visit.js",
 	"Quotation" : "public/quotation.js",
 	"Contract" : "public/contract.js"
 }
