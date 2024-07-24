@@ -2,19 +2,19 @@ frappe.ui.form.on('Maintenance Visit', {
     refresh(frm) {
         if (frm.doc.purposes.length == 0) {
             // Hide fields when purposes are empty
-            // frm.fields_dict['custom_clean_agent'].df.hidden = true;
-            // frm.fields_dict['custom_application'].df.hidden = true;
-            // frm.fields_dict['custom_type_of_detection'].df.hidden = true;
-            // frm.fields_dict['custom_type_of_operation'].df.hidden = true;
-            // frm.fields_dict['custom_water_supply_source'].df.hidden = true;
-            // frm.fields_dict['custom_water_tank'].df.hidden = true;
-            // frm.fields_dict['custom_type_of_water'].df.hidden = true;
-            // frm.fields_dict['custom_location_area_unit'].df.hidden = true;
-            // frm.fields_dict['custom_main_power_supply'].df.hidden = true;
-            // frm.fields_dict['custom_back_up_power_supply'].df.hidden = true;
-            // frm.fields_dict['custom_type_of_circuit_wiring'].df.hidden = true;
+            frm.fields_dict['custom_clean_agent'].df.hidden = true;
+            frm.fields_dict['custom_application'].df.hidden = true;
+            frm.fields_dict['custom_type_of_detection'].df.hidden = true;
+            frm.fields_dict['custom_type_of_operation'].df.hidden = true;
+            frm.fields_dict['custom_water_supply_source'].df.hidden = true;
+            frm.fields_dict['custom_water_tank'].df.hidden = true;
+            frm.fields_dict['custom_type_of_water'].df.hidden = true;
+            frm.fields_dict['custom_location_area_unit'].df.hidden = true;
+            frm.fields_dict['custom_main_power_supply'].df.hidden = true;
+            frm.fields_dict['custom_back_up_power_supply'].df.hidden = true;
+            frm.fields_dict['custom_type_of_circuit_wiring'].df.hidden = true;
         } else {
-
+                alert("In child");
             // Show/Hide fields based on the item_code
             if (frm.doc.purposes[0].item_code == 'Fire Suppression System') {
                 frm.fields_dict['custom_clean_agent'].df.hidden = false;
@@ -150,7 +150,6 @@ frappe.ui.form.on('Maintenance Visit Purpose', {
                 }
             });
 
-            frm.refresh_field('purposes');
 
             // Hide or show fields based on item_code
             if (row.item_code == 'Fire Suppression System') {
