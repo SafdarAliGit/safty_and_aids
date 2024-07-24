@@ -1,5 +1,6 @@
 frappe.ui.form.on('Maintenance Visit', {
     refresh(frm) {
+        alert(frm.doc.purposes.length);
         if (frm.doc.purposes.length == 0) {
             // Hide fields when purposes are empty
             frm.fields_dict['custom_clean_agent'].df.hidden = true;
@@ -14,7 +15,6 @@ frappe.ui.form.on('Maintenance Visit', {
             frm.fields_dict['custom_back_up_power_supply'].df.hidden = true;
             frm.fields_dict['custom_type_of_circuit_wiring'].df.hidden = true;
         } else {
-                alert(frm.doc.purposes[0].item_code);
             // Show/Hide fields based on the item_code
             if (frm.doc.purposes[0].item_code == 'Fire Suppression System') {
                 frm.fields_dict['custom_clean_agent'].df.hidden = false;
