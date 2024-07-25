@@ -13,6 +13,12 @@ frappe.ui.form.on('Maintenance Visit', {
             frm.fields_dict['custom_main_power_supply'].df.hidden = true;
             frm.fields_dict['custom_back_up_power_supply'].df.hidden = true;
             frm.fields_dict['custom_type_of_circuit_wiring'].df.hidden = true;
+            frm.fields_dict['custom_pump_manufacturer_model'].df.hidden = true;
+            frm.fields_dict['custom_controller_manufacturer_model'].df.hidden = true;
+            frm.fields_dict['custom_rated_capacity'].df.hidden = true;
+            frm.fields_dict['custom_rated_pressure'].df.hidden = true;
+            frm.fields_dict['custom_water_supply_sources'].df.hidden = true;
+
         } else {
             // Show/Hide fields based on the item_code
             if (frm.doc.purposes[0].item_code == 'Fire Suppression System') {
@@ -28,7 +34,14 @@ frappe.ui.form.on('Maintenance Visit', {
                 frm.fields_dict['custom_water_supply_source'].df.hidden = true;
                 frm.fields_dict['custom_water_tank'].df.hidden = true;
                 frm.fields_dict['custom_type_of_water'].df.hidden = true;
-            } else {
+
+                frm.fields_dict['custom_pump_manufacturer_model'].df.hidden = true;
+                frm.fields_dict['custom_controller_manufacturer_model'].df.hidden = true;
+                frm.fields_dict['custom_rated_capacity'].df.hidden = true;
+                frm.fields_dict['custom_rated_pressure'].df.hidden = true;
+                frm.fields_dict['custom_water_supply_sources'].df.hidden = true;
+            }
+            if (frm.doc.purposes[0].item_code == 'Diesel Fire Pump System' || frm.doc.purposes[0].item_code == 'Electric Fire Pump System' || frm.doc.purposes[0].item_code == 'Jockey Fire Pump System') {
                 frm.fields_dict['custom_clean_agent'].df.hidden = true;
                 frm.fields_dict['custom_application'].df.hidden = true;
                 frm.fields_dict['custom_type_of_detection'].df.hidden = true;
@@ -37,10 +50,16 @@ frappe.ui.form.on('Maintenance Visit', {
                 frm.fields_dict['custom_back_up_power_supply'].df.hidden = true;
                 frm.fields_dict['custom_type_of_circuit_wiring'].df.hidden = true;
 
-                frm.fields_dict['custom_type_of_operation'].df.hidden = false;
-                frm.fields_dict['custom_water_supply_source'].df.hidden = false;
-                frm.fields_dict['custom_water_tank'].df.hidden = false;
-                frm.fields_dict['custom_type_of_water'].df.hidden = false;
+                frm.fields_dict['custom_type_of_operation'].df.hidden = true;
+                frm.fields_dict['custom_water_supply_source'].df.hidden = true;
+                frm.fields_dict['custom_water_tank'].df.hidden = true;
+                frm.fields_dict['custom_type_of_water'].df.hidden = true;
+
+                frm.fields_dict['custom_pump_manufacturer_model'].df.hidden = false;
+                frm.fields_dict['custom_controller_manufacturer_model'].df.hidden = false;
+                frm.fields_dict['custom_rated_capacity'].df.hidden = false;
+                frm.fields_dict['custom_rated_pressure'].df.hidden = false;
+                frm.fields_dict['custom_water_supply_sources'].df.hidden = false;
             }
         }
 
@@ -56,9 +75,13 @@ frappe.ui.form.on('Maintenance Visit', {
         frm.refresh_field('custom_main_power_supply');
         frm.refresh_field('custom_back_up_power_supply');
         frm.refresh_field('custom_type_of_circuit_wiring');
+        frm.refresh_field('custom_pump_manufacturer_model');
+        frm.refresh_field('custom_controller_manufacturer_model');
+        frm.refresh_field('custom_rated_capacity');
+        frm.refresh_field('custom_rated_pressure');
+        frm.refresh_field('custom_water_supply_sources');
     }
 });
-
 
 
 frappe.ui.form.on('Maintenance Visit Purpose', {
@@ -70,7 +93,7 @@ frappe.ui.form.on('Maintenance Visit Purpose', {
             frm.clear_table("custom_maintenance_visit_items");
             frappe.call({
                 method: 'safty_and_aids.utils.fetch_maintenance_visit_template',
-                args: { item_code: row.item_code },
+                args: {item_code: row.item_code},
                 callback: function (response) {
                     if (response.message) {
                         response.message.mvt.forEach(function (p) {
@@ -99,7 +122,14 @@ frappe.ui.form.on('Maintenance Visit Purpose', {
                 frm.fields_dict['custom_water_supply_source'].df.hidden = true;
                 frm.fields_dict['custom_water_tank'].df.hidden = true;
                 frm.fields_dict['custom_type_of_water'].df.hidden = true;
-            } else {
+
+                frm.fields_dict['custom_pump_manufacturer_model'].df.hidden = true;
+                frm.fields_dict['custom_controller_manufacturer_model'].df.hidden = true;
+                frm.fields_dict['custom_rated_capacity'].df.hidden = true;
+                frm.fields_dict['custom_rated_pressure'].df.hidden = true;
+                frm.fields_dict['custom_water_supply_sources'].df.hidden = true;
+            }
+            if (frm.doc.purposes[0].item_code == 'Diesel Fire Pump System' || frm.doc.purposes[0].item_code == 'Electric Fire Pump System' || frm.doc.purposes[0].item_code == 'Jockey Fire Pump System') {
                 frm.fields_dict['custom_clean_agent'].df.hidden = true;
                 frm.fields_dict['custom_application'].df.hidden = true;
                 frm.fields_dict['custom_type_of_detection'].df.hidden = true;
@@ -108,10 +138,16 @@ frappe.ui.form.on('Maintenance Visit Purpose', {
                 frm.fields_dict['custom_back_up_power_supply'].df.hidden = true;
                 frm.fields_dict['custom_type_of_circuit_wiring'].df.hidden = true;
 
-                frm.fields_dict['custom_type_of_operation'].df.hidden = false;
-                frm.fields_dict['custom_water_supply_source'].df.hidden = false;
-                frm.fields_dict['custom_water_tank'].df.hidden = false;
-                frm.fields_dict['custom_type_of_water'].df.hidden = false;
+                frm.fields_dict['custom_type_of_operation'].df.hidden = true;
+                frm.fields_dict['custom_water_supply_source'].df.hidden = true;
+                frm.fields_dict['custom_water_tank'].df.hidden = true;
+                frm.fields_dict['custom_type_of_water'].df.hidden = true;
+
+                frm.fields_dict['custom_pump_manufacturer_model'].df.hidden = false;
+                frm.fields_dict['custom_controller_manufacturer_model'].df.hidden = false;
+                frm.fields_dict['custom_rated_capacity'].df.hidden = false;
+                frm.fields_dict['custom_rated_pressure'].df.hidden = false;
+                frm.fields_dict['custom_water_supply_sources'].df.hidden = false;
             }
 
             // Refresh fields to apply visibility changes
@@ -126,6 +162,11 @@ frappe.ui.form.on('Maintenance Visit Purpose', {
             frm.refresh_field('custom_main_power_supply');
             frm.refresh_field('custom_back_up_power_supply');
             frm.refresh_field('custom_type_of_circuit_wiring');
+            frm.refresh_field('custom_pump_manufacturer_model');
+            frm.refresh_field('custom_controller_manufacturer_model');
+            frm.refresh_field('custom_rated_capacity');
+            frm.refresh_field('custom_rated_pressure');
+            frm.refresh_field('custom_water_supply_sources');
         }
     }
 });
