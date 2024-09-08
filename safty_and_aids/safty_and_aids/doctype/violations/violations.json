@@ -15,12 +15,13 @@
    "in_list_view": 1,
    "label": "Violation",
    "translatable": 1,
-   "unique": 1
+   "unique": 1,
+   "width": "250"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-08 22:20:32.370655",
+ "modified": "2024-09-08 22:51:54.768340",
  "modified_by": "Administrator",
  "module": "Safty And Aids",
  "name": "Violations",
