@@ -1,0 +1,718 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-08 17:40:55.664045",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "amended_from",
+  "emp_data_section",
+  "nationality",
+  "column_break_nxew",
+  "name1",
+  "column_break_pdaf",
+  "no",
+  "column_break_2mjt",
+  "title",
+  "column_break_zod5",
+  "section",
+  "column_break_32xs",
+  "location",
+  "column_break_ok9c",
+  "clearance_reason",
+  "column_break_c05n",
+  "exit",
+  "column_break_lkno",
+  "vacation",
+  "column_break_wlfu",
+  "reason_for_release",
+  "employ_department_section",
+  "ed_date",
+  "column_break_zusn",
+  "ed_signature",
+  "column_break_jhi9",
+  "ed_name",
+  "section_break_h8xa",
+  "ed_reason",
+  "column_break_uaaw",
+  "ed_not_clear",
+  "column_break_u1so",
+  "ed_clear",
+  "i_t_department_section",
+  "it_date",
+  "column_break_b1n3",
+  "it_signature",
+  "column_break_nar9",
+  "it_name",
+  "column_break_2enq",
+  "it_reason",
+  "column_break_zujx",
+  "it_not_clear",
+  "column_break_hg5p",
+  "it_clear",
+  "stores_section",
+  "date",
+  "column_break_anj6",
+  "signature",
+  "column_break_mx26",
+  "store_name",
+  "section_break_wfmp",
+  "store_reason",
+  "column_break_6ngj",
+  "store_not_clear",
+  "column_break_au9k",
+  "store_clear",
+  "financial_section",
+  "financial_date",
+  "column_break_t70f",
+  "financial_signature",
+  "column_break_rdrp",
+  "financial_name",
+  "section_break_q9jv",
+  "financial_reason",
+  "column_break_ffqu",
+  "financial_not_clear",
+  "column_break_0ts5",
+  "financial_clear",
+  "personnel_department_section",
+  "loans",
+  "column_break_apim",
+  "emp_card",
+  "column_break_lisk",
+  "medical_card",
+  "section_break_cggk",
+  "pd_date",
+  "column_break_nhcc",
+  "pd_signature",
+  "column_break_fdql",
+  "pd_name",
+  "section_break_yxtl",
+  "pd_reason",
+  "column_break_cbyf",
+  "pd_not_clear",
+  "column_break_aicl",
+  "pd_clear",
+  "marketing_and_sales_section",
+  "ms_date",
+  "column_break_2txi",
+  "ms_signature",
+  "column_break_ojt5",
+  "ms_name",
+  "section_break_hzcs",
+  "ms_reason",
+  "column_break_eywb",
+  "ms_not_clear",
+  "column_break_tevn",
+  "ms_clear",
+  "personel_use_only_3_section",
+  "pu_not_clear",
+  "column_break_1q3k",
+  "pu_clear",
+  "section_break_vzlt",
+  "pu_reason",
+  "column_break_houj",
+  "stamp",
+  "section_break_smvv",
+  "personell_manager",
+  "column_break_bzja",
+  "pu_signature",
+  "column_break_xjoc",
+  "pu_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Employee Release",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "emp_data_section",
+   "fieldtype": "Section Break",
+   "label": "Emp. Data (1)"
+  },
+  {
+   "fieldname": "nationality",
+   "fieldtype": "Data",
+   "label": "Nationality",
+   "translatable": 1
+  },
+  {
+   "fieldname": "no",
+   "fieldtype": "Link",
+   "label": "NO",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "no.employee",
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name",
+   "translatable": 1
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "section",
+   "fieldtype": "Data",
+   "label": "Section",
+   "translatable": 1
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "fieldname": "clearance_reason",
+   "fieldtype": "Data",
+   "label": "Clearance Reason"
+  },
+  {
+   "default": "0",
+   "fieldname": "exit",
+   "fieldtype": "Check",
+   "label": "Exit"
+  },
+  {
+   "default": "0",
+   "fieldname": "vacation",
+   "fieldtype": "Check",
+   "label": "Vacation"
+  },
+  {
+   "fieldname": "column_break_2mjt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ok9c",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "reason_for_release",
+   "fieldtype": "Data",
+   "label": "Reason For Release",
+   "translatable": 1
+  },
+  {
+   "fieldname": "column_break_c05n",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_lkno",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_wlfu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_nxew",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_pdaf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_zod5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_32xs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "employ_department_section",
+   "fieldtype": "Section Break",
+   "label": "Employee Department (2)"
+  },
+  {
+   "fieldname": "column_break_zusn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_jhi9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_h8xa",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_uaaw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_u1so",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "i_t_department_section",
+   "fieldtype": "Section Break",
+   "label": "I T Department"
+  },
+  {
+   "fieldname": "ed_date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "ed_signature",
+   "fieldtype": "Data",
+   "label": "Signature",
+   "translatable": 1
+  },
+  {
+   "fieldname": "ed_name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "translatable": 1
+  },
+  {
+   "fieldname": "ed_reason",
+   "fieldtype": "Data",
+   "label": "Reason",
+   "translatable": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "ed_not_clear",
+   "fieldtype": "Check",
+   "label": "Not Clear"
+  },
+  {
+   "default": "0",
+   "fieldname": "ed_clear",
+   "fieldtype": "Check",
+   "label": "Clear"
+  },
+  {
+   "fieldname": "it_date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_b1n3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "it_signature",
+   "fieldtype": "Data",
+   "label": "Signature",
+   "translatable": 1
+  },
+  {
+   "fieldname": "column_break_nar9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "it_name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "translatable": 1
+  },
+  {
+   "fieldname": "column_break_2enq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "it_reason",
+   "fieldtype": "Data",
+   "label": "Reason",
+   "translatable": 1
+  },
+  {
+   "fieldname": "column_break_zujx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "it_not_clear",
+   "fieldtype": "Check",
+   "label": "Not Clear"
+  },
+  {
+   "fieldname": "column_break_hg5p",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "it_clear",
+   "fieldtype": "Check",
+   "label": "Clear"
+  },
+  {
+   "fieldname": "stores_section",
+   "fieldtype": "Section Break",
+   "label": "Stores"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_anj6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "Data",
+   "label": "Signature",
+   "translatable": 1
+  },
+  {
+   "fieldname": "column_break_mx26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "store_name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "translatable": 1
+  },
+  {
+   "fieldname": "section_break_wfmp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "store_reason",
+   "fieldtype": "Data",
+   "label": "Reason",
+   "translatable": 1
+  },
+  {
+   "fieldname": "column_break_6ngj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "store_not_clear",
+   "fieldtype": "Check",
+   "label": "Not Clear"
+  },
+  {
+   "fieldname": "column_break_au9k",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "store_clear",
+   "fieldtype": "Check",
+   "label": "Clear"
+  },
+  {
+   "fieldname": "financial_section",
+   "fieldtype": "Section Break",
+   "label": "Financial"
+  },
+  {
+   "fieldname": "financial_date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_t70f",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "financial_signature",
+   "fieldtype": "Data",
+   "label": "Signature",
+   "translatable": 1
+  },
+  {
+   "fieldname": "column_break_rdrp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "financial_name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "translatable": 1
+  },
+  {
+   "fieldname": "section_break_q9jv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "financial_reason",
+   "fieldtype": "Data",
+   "label": "Reason",
+   "translatable": 1
+  },
+  {
+   "fieldname": "column_break_ffqu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "financial_not_clear",
+   "fieldtype": "Check",
+   "label": "Not Clear"
+  },
+  {
+   "fieldname": "column_break_0ts5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "financial_clear",
+   "fieldtype": "Check",
+   "label": "Clear"
+  },
+  {
+   "fieldname": "personnel_department_section",
+   "fieldtype": "Section Break",
+   "label": "Personnel Department"
+  },
+  {
+   "default": "0",
+   "fieldname": "loans",
+   "fieldtype": "Check",
+   "label": "Loans"
+  },
+  {
+   "default": "0",
+   "fieldname": "emp_card",
+   "fieldtype": "Check",
+   "label": "Emp. Card"
+  },
+  {
+   "default": "0",
+   "fieldname": "medical_card",
+   "fieldtype": "Check",
+   "label": "Medical Card"
+  },
+  {
+   "fieldname": "pd_date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "pd_signature",
+   "fieldtype": "Data",
+   "label": "Signature",
+   "translatable": 1
+  },
+  {
+   "fieldname": "pd_name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "translatable": 1
+  },
+  {
+   "fieldname": "pd_reason",
+   "fieldtype": "Data",
+   "label": "Reason",
+   "translatable": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "pd_not_clear",
+   "fieldtype": "Check",
+   "label": "Not Clear"
+  },
+  {
+   "default": "0",
+   "fieldname": "pd_clear",
+   "fieldtype": "Check",
+   "label": "Clear"
+  },
+  {
+   "fieldname": "column_break_apim",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_lisk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_cggk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_nhcc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_fdql",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_yxtl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_cbyf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_aicl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "marketing_and_sales_section",
+   "fieldtype": "Section Break",
+   "label": "Marketing And Sales"
+  },
+  {
+   "fieldname": "ms_date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_2txi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ms_signature",
+   "fieldtype": "Data",
+   "label": "Signature",
+   "translatable": 1
+  },
+  {
+   "fieldname": "column_break_ojt5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ms_name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "translatable": 1
+  },
+  {
+   "fieldname": "section_break_hzcs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ms_reason",
+   "fieldtype": "Data",
+   "label": "Reason",
+   "translatable": 1
+  },
+  {
+   "fieldname": "column_break_eywb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "ms_not_clear",
+   "fieldtype": "Check",
+   "label": "Not Clear"
+  },
+  {
+   "fieldname": "column_break_tevn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "ms_clear",
+   "fieldtype": "Check",
+   "label": "Clear"
+  },
+  {
+   "fieldname": "personel_use_only_3_section",
+   "fieldtype": "Section Break",
+   "label": "Personel use only (3)"
+  },
+  {
+   "default": "0",
+   "fieldname": "pu_not_clear",
+   "fieldtype": "Check",
+   "label": "Not Clear"
+  },
+  {
+   "fieldname": "column_break_1q3k",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "pu_clear",
+   "fieldtype": "Check",
+   "label": "Clear"
+  },
+  {
+   "fieldname": "section_break_vzlt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "pu_reason",
+   "fieldtype": "Data",
+   "label": "Reason",
+   "translatable": 1
+  },
+  {
+   "fieldname": "stamp",
+   "fieldtype": "Data",
+   "label": "Stamp",
+   "translatable": 1
+  },
+  {
+   "fieldname": "personell_manager",
+   "fieldtype": "Heading",
+   "label": "Personell Manager"
+  },
+  {
+   "fieldname": "pu_signature",
+   "fieldtype": "Data",
+   "label": "Signature",
+   "translatable": 1
+  },
+  {
+   "fieldname": "pu_date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_houj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_smvv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_bzja",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xjoc",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-09-08 21:25:50.867029",
+ "modified_by": "Administrator",
+ "module": "Safty And Aids",
+ "name": "Employee Release",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

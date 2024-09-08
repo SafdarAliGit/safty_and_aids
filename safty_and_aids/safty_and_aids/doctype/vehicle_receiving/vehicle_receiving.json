@@ -1,0 +1,307 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-08 16:47:47.595602",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "amended_from",
+  "date",
+  "column_break_munm",
+  "corresponding",
+  "section_1",
+  "job",
+  "employment_date",
+  "column_break_da7q",
+  "name1",
+  "department",
+  "section_2",
+  "model",
+  "chassis_number",
+  "license_number",
+  "end_date",
+  "date_of_insurance_plicy",
+  "column_break_l8pi",
+  "car_type",
+  "plate_number",
+  "car_color",
+  "release_date",
+  "insurance_policy_number",
+  "3_\u0628\u064a\u0627\u0646\u0627\u062a_\u062d\u0627\u0644\u0629_\u0627\u0644\u0633\u064a\u0627\u0631\u0629_section",
+  "number_of_kilo_meters",
+  "exterior_condition_of_the_car",
+  "number_and_reserve_infidelity",
+  "column_break_wejt",
+  "interior_condition_of_the_car",
+  "shocks",
+  "general_notes",
+  "4_section",
+  "financial_management_notes",
+  "5_section",
+  "human_resources_notes",
+  "section_break_o4d8",
+  "hr_name",
+  "column_break_c38i",
+  "hr_signature",
+  "column_break_up4v",
+  "hr_date",
+  "section_break_3spd",
+  "vehicle_receiving_item"
+ ],
+ "fields": [
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Vehicle Receiving",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "corresponding",
+   "fieldtype": "Data",
+   "label": "Corresponding",
+   "translatable": 1
+  },
+  {
+   "fieldname": "job",
+   "fieldtype": "Data",
+   "label": "Job ",
+   "translatable": 1
+  },
+  {
+   "fieldname": "employment_date",
+   "fieldtype": "Date",
+   "label": "Employment Date"
+  },
+  {
+   "fieldname": "column_break_da7q",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Link",
+   "label": "Name",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "section_1",
+   "fieldtype": "Section Break",
+   "label": "(1) \u0627\u0644\u0628\u064a\u0627\u0646\u0627\u062a \u0627\u0644\u0639\u0627\u0645\u0629"
+  },
+  {
+   "fieldname": "section_2",
+   "fieldtype": "Section Break",
+   "label": "(2 ) \u0628\u064a\u0627\u0646\u0627\u062a \u0627\u0644\u0633\u064a\u0627\u0631\u0629"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model",
+   "translatable": 1
+  },
+  {
+   "fieldname": "chassis_number",
+   "fieldtype": "Data",
+   "label": "Chassis Number",
+   "translatable": 1
+  },
+  {
+   "fieldname": "license_number",
+   "fieldtype": "Data",
+   "label": "License Number",
+   "translatable": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "date_of_insurance_plicy",
+   "fieldtype": "Date",
+   "label": "Date Of Insurance Plicy"
+  },
+  {
+   "fieldname": "column_break_l8pi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "car_type",
+   "fieldtype": "Data",
+   "label": "Car Type",
+   "translatable": 1
+  },
+  {
+   "fieldname": "plate_number",
+   "fieldtype": "Data",
+   "label": "Plate Number",
+   "translatable": 1
+  },
+  {
+   "fieldname": "car_color",
+   "fieldtype": "Color",
+   "label": "Car Color"
+  },
+  {
+   "fieldname": "release_date",
+   "fieldtype": "Date",
+   "label": "Release Date"
+  },
+  {
+   "fieldname": "insurance_policy_number",
+   "fieldtype": "Data",
+   "label": "Insurance Policy Number",
+   "translatable": 1
+  },
+  {
+   "fieldname": "3_\u0628\u064a\u0627\u0646\u0627\u062a_\u062d\u0627\u0644\u0629_\u0627\u0644\u0633\u064a\u0627\u0631\u0629_section",
+   "fieldtype": "Section Break",
+   "label": "(3) \u0628\u064a\u0627\u0646\u0627\u062a \u062d\u0627\u0644\u0629 \u0627\u0644\u0633\u064a\u0627\u0631\u0629"
+  },
+  {
+   "fieldname": "number_of_kilo_meters",
+   "fieldtype": "Data",
+   "label": "Number Of Kilo Meters",
+   "translatable": 1
+  },
+  {
+   "fieldname": "exterior_condition_of_the_car",
+   "fieldtype": "Data",
+   "label": "Exterior Condition Of The Car",
+   "translatable": 1
+  },
+  {
+   "fieldname": "number_and_reserve_infidelity",
+   "fieldtype": "Data",
+   "label": "Number And Reserve Infidelity",
+   "translatable": 1
+  },
+  {
+   "fieldname": "general_notes",
+   "fieldtype": "Small Text",
+   "label": "General Notes",
+   "translatable": 1
+  },
+  {
+   "fieldname": "column_break_wejt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "interior_condition_of_the_car",
+   "fieldtype": "Data",
+   "label": "Interior Condition Of The Car",
+   "translatable": 1
+  },
+  {
+   "fieldname": "shocks",
+   "fieldtype": "Data",
+   "label": "Shocks",
+   "translatable": 1
+  },
+  {
+   "fieldname": "4_section",
+   "fieldtype": "Section Break",
+   "label": "(4) "
+  },
+  {
+   "fieldname": "financial_management_notes",
+   "fieldtype": "Small Text",
+   "label": "Financial Management Notes",
+   "translatable": 1
+  },
+  {
+   "fieldname": "5_section",
+   "fieldtype": "Section Break",
+   "label": "(5)"
+  },
+  {
+   "fieldname": "human_resources_notes",
+   "fieldtype": "Small Text",
+   "label": "Human Resources Notes"
+  },
+  {
+   "fieldname": "hr_name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "translatable": 1
+  },
+  {
+   "fieldname": "hr_signature",
+   "fieldtype": "Data",
+   "label": "Singnature",
+   "translatable": 1
+  },
+  {
+   "fieldname": "hr_date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_c38i",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_up4v",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_o4d8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_3spd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "vehicle_receiving_item",
+   "fieldtype": "Table",
+   "label": "Vehicle Receiving Item",
+   "options": "Vehicle Receiving Item"
+  },
+  {
+   "fieldname": "column_break_munm",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-09-08 17:38:02.890845",
+ "modified_by": "Administrator",
+ "module": "Safty And Aids",
+ "name": "Vehicle Receiving",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

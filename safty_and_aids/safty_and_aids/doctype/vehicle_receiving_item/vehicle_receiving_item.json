@@ -1,0 +1,56 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-08 17:31:04.252906",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "vehicle_source_party",
+  "vehicle_destination_party",
+  "signature",
+  "date"
+ ],
+ "fields": [
+  {
+   "fieldname": "vehicle_source_party",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "The Party From Which The Car Is Received",
+   "translatable": 1
+  },
+  {
+   "fieldname": "vehicle_destination_party",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Car Recipient",
+   "translatable": 1
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Signature",
+   "translatable": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-09-08 17:35:26.335227",
+ "modified_by": "Administrator",
+ "module": "Safty And Aids",
+ "name": "Vehicle Receiving Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
