@@ -1,0 +1,274 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-08 15:06:49.779975",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_4mwm",
+  "amended_from",
+  "id_no",
+  "title",
+  "column_break_ym4c",
+  "section",
+  "department",
+  "column_break_bjrs",
+  "nationality",
+  "starting_work_at",
+  "column_break_usdh",
+  "employee_signature",
+  "employee_dept_section",
+  "to_personnel_department_brplease_be_advised_that_the_employee",
+  "started_the_work_for_the_first_time",
+  "joined_the_work_after_vacation",
+  "dept_manager",
+  "section_break_pahy",
+  "manager_name",
+  "column_break_r7xd",
+  "manager_signature",
+  "column_break_cywi",
+  "manager_date",
+  "personnel_use_only_section",
+  "person_started_work",
+  "included_name_in_payroll",
+  "column_break_ttly",
+  "started_work_days_late",
+  "day_late_and_his_name_will_be_included_in_the_payroll_as_of",
+  "section_break_8hwi",
+  "human_resource_management",
+  "hr_signature",
+  "hr_date",
+  "column_break_ksrt",
+  "personnel_affairs",
+  "personnel_signature",
+  "personnel_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_4mwm",
+   "fieldtype": "Section Break",
+   "label": "Emp. Date"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Work Start",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "id_no",
+   "fieldtype": "Data",
+   "label": "ID No.",
+   "translatable": 1
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "translatable": 1
+  },
+  {
+   "fieldname": "column_break_ym4c",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section",
+   "fieldtype": "Data",
+   "label": "Section",
+   "translatable": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "column_break_bjrs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nationality",
+   "fieldtype": "Data",
+   "label": "Nationality",
+   "translatable": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "starting_work_at",
+   "fieldtype": "Date",
+   "label": "Starting Work At"
+  },
+  {
+   "fieldname": "column_break_usdh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "employee_signature",
+   "fieldtype": "Data",
+   "label": "Employee Signature",
+   "translatable": 1
+  },
+  {
+   "fieldname": "employee_dept_section",
+   "fieldtype": "Section Break",
+   "label": "Employee Dept."
+  },
+  {
+   "fieldname": "to_personnel_department_brplease_be_advised_that_the_employee",
+   "fieldtype": "Heading",
+   "label": "To Personnel Department <br>Please Be Advised That the EMPLOYEE"
+  },
+  {
+   "default": "0",
+   "fieldname": "started_the_work_for_the_first_time",
+   "fieldtype": "Check",
+   "label": "Started The Work For The First Time"
+  },
+  {
+   "default": "0",
+   "fieldname": "joined_the_work_after_vacation",
+   "fieldtype": "Check",
+   "label": "Joined The Work After Vacation"
+  },
+  {
+   "fieldname": "dept_manager",
+   "fieldtype": "Heading",
+   "label": "Dept. Manager"
+  },
+  {
+   "fieldname": "manager_name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "translatable": 1
+  },
+  {
+   "fieldname": "manager_signature",
+   "fieldtype": "Data",
+   "label": "Signature",
+   "translatable": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "manager_date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "section_break_pahy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_r7xd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_cywi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "personnel_use_only_section",
+   "fieldtype": "Section Break",
+   "label": "Personnel Use Only"
+  },
+  {
+   "default": "0",
+   "fieldname": "person_started_work",
+   "fieldtype": "Check",
+   "label": "The above mentioned person started work on the specified date"
+  },
+  {
+   "default": "Today",
+   "fieldname": "included_name_in_payroll",
+   "fieldtype": "Date",
+   "label": "and his name will be included in the payroll as of"
+  },
+  {
+   "fieldname": "column_break_ttly",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "started_work_days_late",
+   "fieldtype": "Int",
+   "label": "The above mentioned person started work"
+  },
+  {
+   "default": "Today",
+   "fieldname": "day_late_and_his_name_will_be_included_in_the_payroll_as_of",
+   "fieldtype": "Date",
+   "label": "day late and his name will be included in the payroll as of"
+  },
+  {
+   "fieldname": "section_break_8hwi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "human_resource_management",
+   "fieldtype": "Heading",
+   "label": "Human Resource Management"
+  },
+  {
+   "fieldname": "hr_signature",
+   "fieldtype": "Data",
+   "label": "The Signature",
+   "translatable": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "hr_date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_ksrt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "personnel_affairs",
+   "fieldtype": "Heading",
+   "label": "Personnel Affairs"
+  },
+  {
+   "fieldname": "personnel_signature",
+   "fieldtype": "Data",
+   "label": "The Signature",
+   "translatable": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "personnel_date",
+   "fieldtype": "Date",
+   "label": "Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-09-08 16:27:48.944878",
+ "modified_by": "Administrator",
+ "module": "Safty And Aids",
+ "name": "Work Start",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
