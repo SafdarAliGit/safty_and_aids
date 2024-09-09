@@ -1,0 +1,208 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-09 14:50:54.439722",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "aknowledge",
+  "nationality_and_work",
+  "column_break_kawj",
+  "with_job",
+  "group_untill_the_date_of",
+  "section_break_eiq7",
+  "explanation",
+  "amended_from",
+  "swear_head",
+  "i_swear_to_god_the_success",
+  "headquarters_including_section",
+  "name1",
+  "column_break_9h9y",
+  "signature",
+  "column_break_naov",
+  "date",
+  "witness_section",
+  "first_witness",
+  "column_break_edzf",
+  "fw_signature",
+  "column_break_spzw",
+  "fw_date",
+  "section_break_7r55",
+  "second_witness",
+  "column_break_l9kp",
+  "sw_signature",
+  "column_break_bguv",
+  "sw_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "aknowledge",
+   "fieldtype": "Data",
+   "label": "I Understand And Aknowledge This",
+   "translatable": 1
+  },
+  {
+   "fieldname": "nationality_and_work",
+   "fieldtype": "Data",
+   "label": "Nationality And Where I Work",
+   "translatable": 1
+  },
+  {
+   "fieldname": "with_job",
+   "fieldtype": "Data",
+   "label": "With a job",
+   "translatable": 1
+  },
+  {
+   "fieldname": "group_untill_the_date_of",
+   "fieldtype": "Date",
+   "label": "Group Untill The Date Of"
+  },
+  {
+   "default": "up to dateThe edited work is between me and the group on the occasion of the end of the working relationship between us. According to this declaration, the group party has become pure and I do not have any rights to it. I have also received all the papers and certificates that the group previously provided upon recruitment or during my service. Thus, I have completely and absolutely absolved the group of any rights, and according to this declaration, I have absolutely no right to recourse against the group for anything or to claim any rights. I acknowledge that I have signed this declaration while I am in the full state considered",
+   "fieldname": "explanation",
+   "fieldtype": "Small Text",
+   "label": "Explanation",
+   "translatable": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Final Clearance",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_kawj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_eiq7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "This is my sincere acknowledgment of that I swear to God, the success",
+   "fieldname": "swear_head",
+   "fieldtype": "Heading",
+   "label": "This is my sincere acknowledgment of that "
+  },
+  {
+   "default": "I swear to God, the success",
+   "fieldname": "i_swear_to_god_the_success",
+   "fieldtype": "Heading",
+   "label": "I swear to God, the success"
+  },
+  {
+   "fieldname": "headquarters_including_section",
+   "fieldtype": "Section Break",
+   "label": "Headquarters Including"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "column_break_9h9y",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "Data",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "column_break_naov",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "witness_section",
+   "fieldtype": "Section Break",
+   "label": "Witness"
+  },
+  {
+   "fieldname": "first_witness",
+   "fieldtype": "Data",
+   "label": "First Witness"
+  },
+  {
+   "fieldname": "column_break_edzf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fw_signature",
+   "fieldtype": "Data",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "column_break_spzw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fw_date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "section_break_7r55",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "second_witness",
+   "fieldtype": "Data",
+   "label": "Second Witness"
+  },
+  {
+   "fieldname": "column_break_l9kp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sw_signature",
+   "fieldtype": "Data",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "column_break_bguv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sw_date",
+   "fieldtype": "Date",
+   "label": "Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-09-09 15:41:37.033575",
+ "modified_by": "Administrator",
+ "module": "Safty And Aids",
+ "name": "Final Clearance",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
