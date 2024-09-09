@@ -28,6 +28,18 @@
   "column_break_twif",
   "vacation__days",
   "amended_from",
+  "type_of_vacation_section",
+  "annual",
+  "column_break_64ew",
+  "efltergency",
+  "column_break_2vbr",
+  "sick_leave",
+  "column_break_gmut",
+  "others",
+  "section_break_jdsh",
+  "leave_reason",
+  "column_break_fsw0",
+  "leave_signature",
   "section_break_cshv",
   "address_during_vacation",
   "column_break_gccn",
@@ -562,12 +574,71 @@
    "fieldname": "hr_signature",
    "fieldtype": "Data",
    "label": "Signature"
+  },
+  {
+   "fieldname": "type_of_vacation_section",
+   "fieldtype": "Section Break",
+   "label": "Type Of Vacation"
+  },
+  {
+   "default": "0",
+   "fieldname": "annual",
+   "fieldtype": "Check",
+   "label": "Annual"
+  },
+  {
+   "fieldname": "column_break_64ew",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "efltergency",
+   "fieldtype": "Check",
+   "label": "Efltergency"
+  },
+  {
+   "fieldname": "column_break_2vbr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "sick_leave",
+   "fieldtype": "Check",
+   "label": "Sick Leave"
+  },
+  {
+   "fieldname": "column_break_gmut",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "others",
+   "fieldtype": "Check",
+   "label": "Others"
+  },
+  {
+   "fieldname": "section_break_jdsh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "leave_reason",
+   "fieldtype": "Small Text",
+   "label": "Reason"
+  },
+  {
+   "fieldname": "column_break_fsw0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "leave_signature",
+   "fieldtype": "Data",
+   "label": "Signature"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-09-09 11:57:30.424341",
+ "modified": "2024-09-09 12:43:04.181181",
  "modified_by": "Administrator",
  "module": "Safty And Aids",
  "name": "Leave Application",
