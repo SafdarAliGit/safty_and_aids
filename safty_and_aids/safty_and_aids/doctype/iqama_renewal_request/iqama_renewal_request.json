@@ -1,0 +1,136 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-09 12:58:51.973715",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_id",
+  "employee_name",
+  "amended_from",
+  "profession",
+  "working_location",
+  "department",
+  "id_expiry_date",
+  "id_renewal_request_period",
+  "column_break_fsnc",
+  "remarks",
+  "incharge_name",
+  "signature",
+  "final_remarks",
+  "approval_signatory"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee_id",
+   "fieldtype": "Link",
+   "label": "ID",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "employee_id.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "\u202bEmployee Name",
+   "translatable": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Iqama Renewal Request",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "profession",
+   "fieldtype": "Data",
+   "label": "\u202b\u202aProfession\u202c\u202c",
+   "translatable": 1
+  },
+  {
+   "fieldname": "working_location",
+   "fieldtype": "Data",
+   "label": "\u202b\u202aWorking\u202c\u202c Location",
+   "translatable": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "id_expiry_date",
+   "fieldtype": "Date",
+   "label": "ID Expiry Date"
+  },
+  {
+   "fieldname": "id_renewal_request_period",
+   "fieldtype": "Select",
+   "label": "ID Renewal Request Period",
+   "options": "3 Months\n6 Months\n9 Months\n12 Months\nFinal Exit",
+   "translatable": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks",
+   "translatable": 1
+  },
+  {
+   "fieldname": "incharge_name",
+   "fieldtype": "Data",
+   "label": "Incharge Name"
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "Data",
+   "label": "Signature",
+   "translatable": 1
+  },
+  {
+   "fieldname": "final_remarks",
+   "fieldtype": "Small Text",
+   "label": "Final Remarks"
+  },
+  {
+   "fieldname": "approval_signatory",
+   "fieldtype": "Data",
+   "label": "Approval Signatory",
+   "translatable": 1
+  },
+  {
+   "fieldname": "column_break_fsnc",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-09-09 13:43:09.362415",
+ "modified_by": "Administrator",
+ "module": "Safty And Aids",
+ "name": "Iqama Renewal Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
