@@ -488,7 +488,8 @@
   {
    "fieldname": "comments",
    "fieldtype": "Small Text",
-   "label": "Comments"
+   "label": "Comments",
+   "translatable": 1
   },
   {
    "fieldname": "column_break_s6yb",
@@ -507,7 +508,8 @@
   {
    "fieldname": "personnel_affairs",
    "fieldtype": "Data",
-   "label": "Personnel Affairs"
+   "label": "Personnel Affairs",
+   "translatable": 1
   },
   {
    "fieldname": "column_break_ow1j",
@@ -546,7 +548,8 @@
   {
    "fieldname": "reason",
    "fieldtype": "Small Text",
-   "label": "Reason"
+   "label": "Reason",
+   "translatable": 1
   },
   {
    "fieldname": "section_break_dex6",
@@ -564,7 +567,8 @@
   {
    "fieldname": "date",
    "fieldtype": "Data",
-   "label": "Date"
+   "label": "Date",
+   "translatable": 1
   },
   {
    "fieldname": "column_break_hwz4",
@@ -573,7 +577,8 @@
   {
    "fieldname": "hr_signature",
    "fieldtype": "Data",
-   "label": "Signature"
+   "label": "Signature",
+   "translatable": 1
   },
   {
    "fieldname": "type_of_vacation_section",
@@ -638,7 +643,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-09-09 12:43:04.181181",
+ "modified": "2024-09-09 12:55:12.556715",
  "modified_by": "Administrator",
  "module": "Safty And Aids",
  "name": "Leave Application",
