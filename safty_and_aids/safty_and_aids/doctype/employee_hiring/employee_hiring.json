@@ -61,23 +61,23 @@
    "columns": 1,
    "fieldname": "job_proposed",
    "fieldtype": "Data",
-   "label": "\u0627\u0644\u0648\u0638\u064a\u0641\u0629 \u0627\u0644\u0645\u0642\u062a\u0631\u062d \u0627\u0633\u062a\u062d\u062f\u0627\u062b\u0647\u0627"
+   "label": "The job proposed to be created"
   },
   {
    "default": "Today",
    "fieldname": "expected_date_of_commencement_of_work",
    "fieldtype": "Date",
-   "label": "\u0627\u0644\u062a\u0627\u0631\u064a\u062e \u0627\u0644\u0645\u062a\u0648\u0642\u0639 \u0644\u0645\u0628\u0627\u0634\u0631\u0629 \u0627\u0644\u0639\u0645\u0644"
+   "label": "Expected date of commencement of work"
   },
   {
    "fieldname": "proposed_salary",
    "fieldtype": "Currency",
-   "label": "\u0627\u0644\u0631\u0627\u062a\u0628 \u0627\u0644\u0645\u0642\u062a\u0631\u062d"
+   "label": "Proposed salary"
   },
   {
    "fieldname": "job_data",
    "fieldtype": "Section Break",
-   "label": " (1)\u0628\u064a\u0627\u0646\u0627\u062a \u0627\u0644\u0648\u0638\u064a\u0641\u0629"
+   "label": " (1)Job Information"
   },
   {
    "fieldname": "responsibilities",
@@ -87,7 +87,7 @@
   {
    "fieldname": "job_responsibilities",
    "fieldtype": "Small Text",
-   "label": "\u0648\u0635\u0641 \u0645\u062e\u062a\u0635\u0631 \u0644\u0645\u0647\u0627\u0645 \u0648\u0648\u0627\u062c\u0628\u0627\u062a \u0627\u0644\u0648\u0638\u064a\u0641\u0629"
+   "label": "A brief description of job tasks and responsibilities"
   },
   {
    "fieldname": "section_justifications_for_creating_the_job",
@@ -97,29 +97,29 @@
   {
    "fieldname": "justifications_for_creating_the_job",
    "fieldtype": "Small Text",
-   "label": "\u0645\u0628\u0631\u0631\u0627\u062a \u0627\u0633\u062a\u062d\u062f\u0627\u062b \u0627\u0644\u0648\u0638\u064a\u0641\u0629"
+   "label": "Justifications for creating the position."
   },
   {
    "fieldname": "justifications_name",
    "fieldtype": "Data",
-   "label": "\u0627\u0644\u0625\u0633\u0645"
+   "label": "Name"
   },
   {
    "fieldname": "justifications_signature",
    "fieldtype": "Data",
-   "label": "\u0627\u0644\u062a\u0648\u0642\u064a\u0639"
+   "label": "Signature"
   },
   {
    "default": "Today",
    "fieldname": "justifications_date",
    "fieldtype": "Date",
-   "label": "\u0627\u0644\u062a\u0627\u0631\u064a\u062e"
+   "label": "Date"
   },
   {
    "fieldname": "suggeted_source_for_selection",
    "fieldtype": "Select",
-   "label": "\u0627\u0644\u0645\u0635\u062f\u0631 \u0627\u0644\u0645\u0642\u062a\u0631\u062d \u0644\u0644\u0627\u062e\u062a\u064a\u0627\u0631",
-   "options": "\u062a\u0631\u0642\u064a\u0629\n\u0646\u0642\u0644\n\u062a\u0643\u0644\u064a\u0641\n\u062a\u0648\u0638\u064a\u0641 \u0645\u0646 \u0627\u0644\u062e\u0627\u0631\u062c"
+   "label": "Suggested source of choice",
+   "options": "\nPromotion\nQuote\nSuffering\nRecruitment from abroad"
   },
   {
    "fieldname": "section_hr_notes",
@@ -129,22 +129,22 @@
   {
    "fieldname": "hr_notes",
    "fieldtype": "Small Text",
-   "label": "\u0645\u0644\u0627\u062d\u0638\u0627\u062a \u0627\u0644\u0645\u0648\u0627\u0631\u062f \u0627\u0644\u0628\u0634\u0631\u064a\u0629"
+   "label": "Human Resources Notes"
   },
   {
    "fieldname": "hr_name",
    "fieldtype": "Data",
-   "label": "\u0627\u0644\u0625\u0633\u0645"
+   "label": "Name"
   },
   {
    "fieldname": "hr_signature",
    "fieldtype": "Data",
-   "label": "\u0627\u0644\u062a\u0648\u0642\u064a\u0639"
+   "label": "Signature"
   },
   {
    "fieldname": "hr_date",
    "fieldtype": "Date",
-   "label": "\u0627\u0644\u062a\u0627\u0631\u064a\u062e"
+   "label": "Date"
   },
   {
    "fieldname": "observation_section",
@@ -154,29 +154,29 @@
   {
    "fieldname": "\u0645\u0644\u0627\u062d\u0638\u0627\u062a_\u0627\u0644\u062c\u0647\u0629_\u0635\u0627\u062d\u0628\u0629_\u0627\u0644\u0635\u0644\u0627\u062d\u064a\u0629",
    "fieldtype": "Small Text",
-   "label": "\u0645\u0644\u0627\u062d\u0638\u0627\u062a \u0627\u0644\u062c\u0647\u0629 \u0635\u0627\u062d\u0628\u0629 \u0627\u0644\u0635\u0644\u0627\u062d\u064a\u0629"
+   "label": "Notes from the authorized entity"
   },
   {
    "fieldname": "obsevation_name",
    "fieldtype": "Data",
-   "label": "\u0627\u0644\u0625\u0633\u0645"
+   "label": "Name"
   },
   {
    "fieldname": "observation_signature",
    "fieldtype": "Data",
-   "label": "\u0627\u0644\u062a\u0648\u0642\u064a\u0639"
+   "label": "Signature"
   },
   {
    "default": "Today",
    "fieldname": "observation_date",
    "fieldtype": "Date",
-   "label": "\u0627\u0644\u062a\u0627\u0631\u064a\u062e"
+   "label": "Date"
   },
   {
    "columns": 1,
    "fieldname": "department",
    "fieldtype": "Data",
-   "label": "\u0627\u0644\u0625\u062f\u0627\u0631\u0629 / \u0627\u0644\u0642\u0633\u0645"
+   "label": "Department"
   },
   {
    "fieldname": "column_break_e6z2",
@@ -226,7 +226,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-09-08 14:45:15.054291",
+ "modified": "2024-09-12 09:44:52.295598",
  "modified_by": "Administrator",
  "module": "Safty And Aids",
  "name": "Employee Hiring",
