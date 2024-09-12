@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-12 07:08:27.184653",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "number_of_installments",
+  "premium_value",
+  "residual",
+  "time_out",
+  "loan_value",
+  "expression"
+ ],
+ "fields": [
+  {
+   "fieldname": "number_of_installments",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Number Of Installments"
+  },
+  {
+   "fieldname": "premium_value",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Premium Value"
+  },
+  {
+   "fieldname": "residual",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Residual"
+  },
+  {
+   "fieldname": "time_out",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Time Out"
+  },
+  {
+   "fieldname": "loan_value",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Loan Value"
+  },
+  {
+   "fieldname": "expression",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Expression",
+   "options": "\nPersonal Advance\nOther"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-09-12 07:28:10.420310",
+ "modified_by": "Administrator",
+ "module": "Safty And Aids",
+ "name": "Statement Of Advances And Outstanding Debts",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

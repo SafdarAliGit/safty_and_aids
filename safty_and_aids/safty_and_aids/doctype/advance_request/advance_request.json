@@ -1,0 +1,320 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-11 21:40:22.347347",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_mevn",
+  "employee_number",
+  "name1",
+  "amended_from",
+  "job",
+  "employment_history",
+  "column_break_rpww",
+  "department",
+  "basic_salary",
+  "amount_of_advance_required",
+  "payment_method",
+  "section_break_vbww",
+  "gd_name",
+  "column_break_9tqx",
+  "gd_signature",
+  "column_break_fqzx",
+  "gd_date",
+  "2_justifications_for_requesting_an_advance_section",
+  "justifications",
+  "3_statement_of_advances_and_outstanding_debts_section",
+  "statement_of_advances_and_outstanding_debts",
+  "sponsorship_section",
+  "guaranter_name",
+  "column_break_nba3",
+  "name2",
+  "section_break_to2w",
+  "g_name",
+  "column_break_iash",
+  "g_date",
+  "column_break_xupr",
+  "g_signature",
+  "5_recommendations_section",
+  "should_pay_or_not",
+  "column_break_roku",
+  "installments_starting_from_the_date",
+  "section_break_6vsh",
+  "r_name",
+  "column_break_545o",
+  "r_date",
+  "column_break_nz2j",
+  "r_signature",
+  "6_accreditation_section",
+  "a_name",
+  "column_break_ikci",
+  "a_signature",
+  "column_break_gzhs",
+  "a_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_mevn",
+   "fieldtype": "Section Break",
+   "label": "(1) General data"
+  },
+  {
+   "fieldname": "employee_number",
+   "fieldtype": "Link",
+   "label": "Employee number",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "employee_number.employee_name",
+   "fieldname": "name1",
+   "fieldtype": "Link",
+   "label": "Name",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Advance Request",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "job",
+   "fieldtype": "Data",
+   "label": "Job"
+  },
+  {
+   "fieldname": "employment_history",
+   "fieldtype": "Data",
+   "label": "Employment History"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "basic_salary",
+   "fieldtype": "Currency",
+   "label": "Basic salary"
+  },
+  {
+   "fieldname": "amount_of_advance_required",
+   "fieldtype": "Currency",
+   "label": "Amount Of Advance Required"
+  },
+  {
+   "fieldname": "payment_method",
+   "fieldtype": "Data",
+   "label": "Payment Method"
+  },
+  {
+   "fieldname": "gd_name",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "gd_signature",
+   "fieldtype": "Data",
+   "label": "Signature"
+  },
+  {
+   "default": "Today",
+   "fieldname": "gd_date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_rpww",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_vbww",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_9tqx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_fqzx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "2_justifications_for_requesting_an_advance_section",
+   "fieldtype": "Section Break",
+   "label": "(2) Justifications For Requesting An Advance"
+  },
+  {
+   "fieldname": "justifications",
+   "fieldtype": "Small Text",
+   "label": "Justifications"
+  },
+  {
+   "fieldname": "3_statement_of_advances_and_outstanding_debts_section",
+   "fieldtype": "Section Break",
+   "label": "(3) Statement Of Advances And Outstanding Debts"
+  },
+  {
+   "fieldname": "statement_of_advances_and_outstanding_debts",
+   "fieldtype": "Table",
+   "label": "Statement Of Advances And Outstanding Debts",
+   "options": "Statement Of Advances And Outstanding Debts"
+  },
+  {
+   "fieldname": "sponsorship_section",
+   "fieldtype": "Section Break",
+   "label": "(4) Sponsorship"
+  },
+  {
+   "fieldname": "guaranter_name",
+   "fieldtype": "Data",
+   "label": "I am the undersigned"
+  },
+  {
+   "fieldname": "name2",
+   "fieldtype": "Link",
+   "label": "By my signature below I hereby guarantee Mr",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "g_name",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "g_date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "g_signature",
+   "fieldtype": "Data",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "column_break_nba3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_to2w",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_iash",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xupr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "5_recommendations_section",
+   "fieldtype": "Section Break",
+   "label": "(5) Recommendations"
+  },
+  {
+   "default": "Should Not Pay",
+   "fieldname": "should_pay_or_not",
+   "fieldtype": "Select",
+   "label": "Should Pay Or Should Not Pay",
+   "options": "Should Not Pay\nShould Pay"
+  },
+  {
+   "depends_on": "eval: doc.should_pay_or_not =='Should Pay';",
+   "fieldname": "installments_starting_from_the_date",
+   "fieldtype": "Date",
+   "label": "Installments starting from the date"
+  },
+  {
+   "fieldname": "column_break_roku",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_6vsh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "r_name",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "column_break_545o",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "r_date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_nz2j",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "r_signature",
+   "fieldtype": "Data",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "6_accreditation_section",
+   "fieldtype": "Section Break",
+   "label": "(6) Accreditation"
+  },
+  {
+   "fieldname": "a_name",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "column_break_ikci",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "a_signature",
+   "fieldtype": "Data",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "column_break_gzhs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "a_date",
+   "fieldtype": "Date",
+   "label": "Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-09-12 08:04:32.990409",
+ "modified_by": "Administrator",
+ "module": "Safty And Aids",
+ "name": "Advance Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
