@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "HR-EH-.######",
  "creation": "2024-09-08 12:21:23.723084",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -37,7 +38,7 @@
   "column_break_cjzh",
   "hr_date",
   "observation_section",
-  "\u0645\u0644\u0627\u062d\u0638\u0627\u062a_\u0627\u0644\u062c\u0647\u0629_\u0635\u0627\u062d\u0628\u0629_\u0627\u0644\u0635\u0644\u0627\u062d\u064a\u0629",
+  "authority_notes",
   "section_break_fstr",
   "obsevation_name",
   "column_break_0wto",
@@ -89,7 +90,7 @@
   },
   {
    "fieldname": "job_responsibilities",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text",
    "label": "A brief description of job tasks and responsibilities"
   },
   {
@@ -99,7 +100,7 @@
   },
   {
    "fieldname": "justifications_for_creating_the_job",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text",
    "label": "Justifications for creating the position."
   },
   {
@@ -131,7 +132,7 @@
   },
   {
    "fieldname": "hr_notes",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text",
    "label": "Human Resources Notes"
   },
   {
@@ -155,11 +156,6 @@
    "label": "(5)"
   },
   {
-   "fieldname": "\u0645\u0644\u0627\u062d\u0638\u0627\u062a_\u0627\u0644\u062c\u0647\u0629_\u0635\u0627\u062d\u0628\u0629_\u0627\u0644\u0635\u0644\u0627\u062d\u064a\u0629",
-   "fieldtype": "Small Text",
-   "label": "Notes from the authorized entity"
-  },
-  {
    "fieldname": "obsevation_name",
    "fieldtype": "Data",
    "label": "Name"
@@ -178,8 +174,9 @@
   {
    "columns": 1,
    "fieldname": "department",
-   "fieldtype": "Data",
-   "label": "Department"
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
   },
   {
    "fieldname": "column_break_e6z2",
@@ -236,15 +233,21 @@
   {
    "fieldname": "column_break_mmhv",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "authority_notes",
+   "fieldtype": "Text",
+   "label": "Notes from the authorized entity"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-09-12 10:15:14.632636",
+ "modified": "2024-09-15 05:57:17.459990",
  "modified_by": "Administrator",
  "module": "Safty And Aids",
  "name": "Employee Hiring",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
