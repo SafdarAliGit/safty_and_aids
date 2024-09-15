@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "HR-WL-.######",
  "creation": "2024-09-08 22:06:19.773440",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -9,9 +10,10 @@
   "column_break_grzo",
   "approved",
   "section_break_2xi7",
-  "name1",
   "column_break_z7ml",
   "employee_no",
+  "column_break_fhbn",
+  "name1",
   "section_break_k4fq",
   "warning_letter_item",
   "amended_from",
@@ -39,6 +41,7 @@
    "label": "Approved"
   },
   {
+   "fetch_from": "employee_no.employee_name",
    "fieldname": "name1",
    "fieldtype": "Data",
    "label": "Name",
@@ -126,15 +129,20 @@
    "fieldname": "signature",
    "fieldtype": "Data",
    "label": "Signature"
+  },
+  {
+   "fieldname": "column_break_fhbn",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-09-08 22:43:29.999349",
+ "modified": "2024-09-15 15:01:31.352637",
  "modified_by": "Administrator",
  "module": "Safty And Aids",
  "name": "Warning Letter",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
