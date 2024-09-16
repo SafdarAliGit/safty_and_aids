@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "HR-IRR-.######",
  "creation": "2024-09-09 12:58:51.973715",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -16,6 +17,7 @@
   "column_break_fsnc",
   "remarks",
   "incharge_name",
+  "incharge_department",
   "signature",
   "final_remarks",
   "approval_signatory"
@@ -105,15 +107,22 @@
   {
    "fieldname": "column_break_fsnc",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "incharge_department",
+   "fieldtype": "Link",
+   "label": "Incharge Department",
+   "options": "Department"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-09-09 13:43:09.362415",
+ "modified": "2024-09-16 14:38:22.467361",
  "modified_by": "Administrator",
  "module": "Safty And Aids",
  "name": "Iqama Renewal Request",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
