@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "HR-VR-.######",
  "creation": "2024-09-08 16:47:47.595602",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -193,7 +194,7 @@
   },
   {
    "fieldname": "general_notes",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text",
    "label": "General Notes",
    "translatable": 1
   },
@@ -220,7 +221,7 @@
   },
   {
    "fieldname": "financial_management_notes",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text",
    "label": "Financial Management Notes",
    "translatable": 1
   },
@@ -231,7 +232,7 @@
   },
   {
    "fieldname": "human_resources_notes",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text",
    "label": "Human Resources Notes"
   },
   {
@@ -281,10 +282,11 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-09-08 17:38:02.890845",
+ "modified": "2024-09-22 18:40:17.315991",
  "modified_by": "Administrator",
  "module": "Safty And Aids",
  "name": "Vehicle Receiving",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
