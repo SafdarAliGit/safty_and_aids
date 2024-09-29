@@ -8,7 +8,7 @@
   "1_employee_data_section",
   "nationality",
   "column_break_odyx",
-  "no",
+  "employee_no",
   "column_break_sjfe",
   "employee_name",
   "section_break_qba6",
@@ -128,12 +128,6 @@
   {
    "fieldname": "column_break_odyx",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "no",
-   "fieldtype": "Link",
-   "label": "No",
-   "options": "Employee"
   },
   {
    "fieldname": "column_break_sjfe",
@@ -638,12 +632,18 @@
    "fieldname": "leave_signature",
    "fieldtype": "Data",
    "label": "Signature"
+  },
+  {
+   "fieldname": "employee_no",
+   "fieldtype": "Link",
+   "label": "No",
+   "options": "Employee"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-09-09 12:55:12.556715",
+ "modified": "2024-09-29 11:26:58.118872",
  "modified_by": "Administrator",
  "module": "Safty And Aids",
  "name": "Leave Application",
