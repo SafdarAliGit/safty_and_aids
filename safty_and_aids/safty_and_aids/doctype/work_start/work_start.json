@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "HR-WS-.######",
  "creation": "2024-09-08 15:06:49.779975",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -8,6 +9,7 @@
   "section_break_4mwm",
   "amended_from",
   "id_no",
+  "name1",
   "title",
   "column_break_ym4c",
   "section",
@@ -32,8 +34,9 @@
   "person_started_work",
   "included_name_in_payroll",
   "column_break_ttly",
+  "person_started_work_late",
   "started_work_days_late",
-  "day_late_and_his_name_will_be_included_in_the_payroll_as_of",
+  "included_name_in_payroll_late",
   "section_break_8hwi",
   "human_resource_management",
   "hr_signature",
@@ -41,7 +44,11 @@
   "column_break_ksrt",
   "personnel_affairs",
   "personnel_signature",
-  "personnel_date"
+  "personnel_date",
+  "section_break_btra",
+  "original_employee_file",
+  "column_break_6oet",
+  "image_of_accounting_department"
  ],
  "fields": [
   {
@@ -61,9 +68,9 @@
   },
   {
    "fieldname": "id_no",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "ID No.",
-   "translatable": 1
+   "options": "Employee"
   },
   {
    "fieldname": "title",
@@ -109,9 +116,8 @@
   },
   {
    "fieldname": "employee_signature",
-   "fieldtype": "Data",
-   "label": "Employee Signature",
-   "translatable": 1
+   "fieldtype": "Signature",
+   "label": "Employee Signature"
   },
   {
    "fieldname": "employee_dept_section",
@@ -142,15 +148,14 @@
   },
   {
    "fieldname": "manager_name",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "Name",
-   "translatable": 1
+   "options": "Employee"
   },
   {
    "fieldname": "manager_signature",
-   "fieldtype": "Data",
-   "label": "Signature",
-   "translatable": 1
+   "fieldtype": "Signature",
+   "label": "Signature"
   },
   {
    "default": "Today",
@@ -185,7 +190,7 @@
    "default": "Today",
    "fieldname": "included_name_in_payroll",
    "fieldtype": "Date",
-   "label": "and his name will be included in the payroll as of"
+   "label": "his name will be included in the payroll as of"
   },
   {
    "fieldname": "column_break_ttly",
@@ -194,13 +199,7 @@
   {
    "fieldname": "started_work_days_late",
    "fieldtype": "Int",
-   "label": "The above mentioned person started work"
-  },
-  {
-   "default": "Today",
-   "fieldname": "day_late_and_his_name_will_be_included_in_the_payroll_as_of",
-   "fieldtype": "Date",
-   "label": "day late and his name will be included in the payroll as of"
+   "label": "Late Days"
   },
   {
    "fieldname": "section_break_8hwi",
@@ -213,9 +212,8 @@
   },
   {
    "fieldname": "hr_signature",
-   "fieldtype": "Data",
-   "label": "The Signature",
-   "translatable": 1
+   "fieldtype": "Signature",
+   "label": "The Signature"
   },
   {
    "default": "Today",
@@ -234,24 +232,60 @@
   },
   {
    "fieldname": "personnel_signature",
-   "fieldtype": "Data",
-   "label": "The Signature",
-   "translatable": 1
+   "fieldtype": "Signature",
+   "label": "The Signature"
   },
   {
    "default": "Today",
    "fieldname": "personnel_date",
    "fieldtype": "Date",
    "label": "Date"
+  },
+  {
+   "fetch_from": "id_no.employee_name",
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "default": "0",
+   "fieldname": "person_started_work_late",
+   "fieldtype": "Check",
+   "label": "The above mentioned person started work late"
+  },
+  {
+   "default": "Today",
+   "fieldname": "included_name_in_payroll_late",
+   "fieldtype": "Date",
+   "label": "his name will be included in the payroll as of"
+  },
+  {
+   "fieldname": "section_break_btra",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "original_employee_file",
+   "fieldtype": "Attach",
+   "label": "Original employee file"
+  },
+  {
+   "fieldname": "column_break_6oet",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image_of_accounting_department",
+   "fieldtype": "Attach Image",
+   "label": "Image of accounting department"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-09-08 16:27:48.944878",
+ "modified": "2024-09-29 10:26:17.600944",
  "modified_by": "Administrator",
  "module": "Safty And Aids",
  "name": "Work Start",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {

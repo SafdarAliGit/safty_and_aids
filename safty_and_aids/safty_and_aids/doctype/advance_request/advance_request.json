@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "HR-AR-.######",
  "creation": "2024-09-11 21:40:22.347347",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -39,6 +40,8 @@
   "5_recommendations_section",
   "should_pay_or_not",
   "column_break_roku",
+  "riyal_to_be_paid_in_installments",
+  "column_break_xqgb",
   "installments_starting_from_the_date",
   "section_break_6vsh",
   "r_name",
@@ -68,9 +71,9 @@
   {
    "fetch_from": "employee_number.employee_name",
    "fieldname": "name1",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Name",
-   "options": "Employee"
+   "options": " "
   },
   {
    "fieldname": "amended_from",
@@ -120,7 +123,7 @@
   },
   {
    "fieldname": "gd_signature",
-   "fieldtype": "Data",
+   "fieldtype": "Signature",
    "label": "Signature"
   },
   {
@@ -152,7 +155,7 @@
   },
   {
    "fieldname": "justifications",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text",
    "label": "Justifications"
   },
   {
@@ -174,7 +177,8 @@
   {
    "fieldname": "guaranter_name",
    "fieldtype": "Data",
-   "label": "I am the undersigned"
+   "label": "I am the undersigned",
+   "translatable": 1
   },
   {
    "fieldname": "name2",
@@ -194,7 +198,7 @@
   },
   {
    "fieldname": "g_signature",
-   "fieldtype": "Data",
+   "fieldtype": "Signature",
    "label": "Signature"
   },
   {
@@ -259,7 +263,7 @@
   },
   {
    "fieldname": "r_signature",
-   "fieldtype": "Data",
+   "fieldtype": "Signature",
    "label": "Signature"
   },
   {
@@ -278,7 +282,7 @@
   },
   {
    "fieldname": "a_signature",
-   "fieldtype": "Data",
+   "fieldtype": "Signature",
    "label": "Signature"
   },
   {
@@ -289,15 +293,26 @@
    "fieldname": "a_date",
    "fieldtype": "Date",
    "label": "Date"
+  },
+  {
+   "depends_on": "eval: doc.should_pay_or_not =='Should Pay';",
+   "fieldname": "riyal_to_be_paid_in_installments",
+   "fieldtype": "Currency",
+   "label": "Riyal To Be Paid In Installments"
+  },
+  {
+   "fieldname": "column_break_xqgb",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-09-12 08:04:32.990409",
+ "modified": "2024-09-23 07:48:52.315193",
  "modified_by": "Administrator",
  "module": "Safty And Aids",
  "name": "Advance Request",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
