@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "HR-LA-.######",
  "creation": "2024-09-09 08:46:32.743097",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -31,7 +32,7 @@
   "type_of_vacation_section",
   "annual",
   "column_break_64ew",
-  "efltergency",
+  "emergency",
   "column_break_2vbr",
   "sick_leave",
   "column_break_gmut",
@@ -49,6 +50,7 @@
   "column_break_a5tj",
   "file_no",
   "2_emp_dept_section",
+  "accepted",
   "no_objection_for_days",
   "column_break_vyq0",
   "start_date",
@@ -67,6 +69,7 @@
   "column_break_ow1j",
   "card_number",
   "section_break_uv8r",
+  "leave_allowed_column",
   "leave_allowed",
   "leave_from",
   "column_break_rogh",
@@ -75,6 +78,8 @@
   "for_days",
   "section_break_1k4t",
   "balance_of_leaves",
+  "column_break_wbum",
+  "balance_of_leaves_from",
   "column_break_l9ub",
   "date_of_last_return_from_leave",
   "column_break_nppi",
@@ -87,8 +92,6 @@
   "boarding_order_no",
   "section_break_jff5",
   "on_date",
-  "column_break_8bai",
-  "till_date",
   "column_break_lku7",
   "settlement_from",
   "column_break_i5kw",
@@ -221,6 +224,7 @@
    "search_index": 1
   },
   {
+   "fetch_from": "employee_no.employee_name",
    "fieldname": "employee_name",
    "fieldtype": "Data",
    "label": "Name",
@@ -272,16 +276,17 @@
    "label": "(2) Emp. Dept. "
   },
   {
+   "depends_on": "eval:doc.accepted == 1;",
    "fieldname": "no_objection_for_days",
    "fieldtype": "Data",
-   "label": "No Objection For Days",
-   "translatable": 1
+   "label": "No Objection For Days"
   },
   {
    "fieldname": "column_break_vyq0",
    "fieldtype": "Column Break"
   },
   {
+   "depends_on": "eval:doc.accepted == 1;",
    "fieldname": "start_date",
    "fieldtype": "Date",
    "label": "From Date"
@@ -292,6 +297,7 @@
   },
   {
    "default": "0",
+   "depends_on": "eval:doc.accepted == 0;",
    "fieldname": "rejected",
    "fieldtype": "Check",
    "label": "Rejected"
@@ -301,6 +307,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "depends_on": "eval:doc.rejected == 1;",
    "fieldname": "reasons",
    "fieldtype": "Small Text",
    "label": "Reasons"
@@ -320,9 +327,8 @@
   },
   {
    "fieldname": "signature",
-   "fieldtype": "Data",
-   "label": "Signature",
-   "translatable": 1
+   "fieldtype": "Signature",
+   "label": "Signature"
   },
   {
    "fieldname": "column_break_mo3u",
@@ -330,9 +336,9 @@
   },
   {
    "fieldname": "sig_name",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "Name",
-   "translatable": 1
+   "options": "Employee"
   },
   {
    "fieldname": "3_personnel_use_only_section",
@@ -354,11 +360,13 @@
    "fieldtype": "Section Break"
   },
   {
+   "default": "0",
    "fieldname": "leave_allowed",
-   "fieldtype": "Column Break",
-   "label": "The above mentioned person is entitled to the above-mentioned leave"
+   "fieldtype": "Check",
+   "label": "Leave Allowed"
   },
   {
+   "depends_on": "eval:doc.leave_allowed == 1;",
    "fieldname": "leave_from",
    "fieldtype": "Date",
    "label": "From Date"
@@ -368,6 +376,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "depends_on": "eval:doc.leave_allowed ==1;",
    "fieldname": "leave_to",
    "fieldtype": "Date",
    "label": "To Date"
@@ -377,6 +386,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "depends_on": "eval:doc.leave_allowed == 1;",
    "fieldname": "for_days",
    "fieldtype": "Data",
    "label": "For Days",
@@ -449,15 +459,6 @@
    "label": "On Date"
   },
   {
-   "fieldname": "column_break_8bai",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "till_date",
-   "fieldtype": "Date",
-   "label": "To date"
-  },
-  {
    "fieldname": "column_break_lku7",
    "fieldtype": "Column Break"
   },
@@ -501,9 +502,8 @@
   },
   {
    "fieldname": "personnel_affairs",
-   "fieldtype": "Data",
-   "label": "Personnel Affairs",
-   "translatable": 1
+   "fieldtype": "Signature",
+   "label": "Personnel Affairs"
   },
   {
    "fieldname": "column_break_ow1j",
@@ -560,9 +560,8 @@
   },
   {
    "fieldname": "date",
-   "fieldtype": "Data",
-   "label": "Date",
-   "translatable": 1
+   "fieldtype": "Date",
+   "label": "Date"
   },
   {
    "fieldname": "column_break_hwz4",
@@ -570,9 +569,8 @@
   },
   {
    "fieldname": "hr_signature",
-   "fieldtype": "Data",
-   "label": "Signature",
-   "translatable": 1
+   "fieldtype": "Signature",
+   "label": "Signature"
   },
   {
    "fieldname": "type_of_vacation_section",
@@ -588,12 +586,6 @@
   {
    "fieldname": "column_break_64ew",
    "fieldtype": "Column Break"
-  },
-  {
-   "default": "0",
-   "fieldname": "efltergency",
-   "fieldtype": "Check",
-   "label": "Efltergency"
   },
   {
    "fieldname": "column_break_2vbr",
@@ -630,7 +622,7 @@
   },
   {
    "fieldname": "leave_signature",
-   "fieldtype": "Data",
+   "fieldtype": "Signature",
    "label": "Signature"
   },
   {
@@ -638,15 +630,43 @@
    "fieldtype": "Link",
    "label": "No",
    "options": "Employee"
+  },
+  {
+   "default": "0",
+   "fieldname": "emergency",
+   "fieldtype": "Check",
+   "label": "Emergency"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.rejected == 0;",
+   "fieldname": "accepted",
+   "fieldtype": "Check",
+   "label": "Accepted"
+  },
+  {
+   "fieldname": "leave_allowed_column",
+   "fieldtype": "Column Break",
+   "label": "The above mentioned person is entitled to the above-mentioned leave"
+  },
+  {
+   "fieldname": "balance_of_leaves_from",
+   "fieldtype": "Date",
+   "label": "Balance Of Leaves From"
+  },
+  {
+   "fieldname": "column_break_wbum",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-09-29 11:26:58.118872",
+ "modified": "2024-10-13 20:27:27.550538",
  "modified_by": "Administrator",
  "module": "Safty And Aids",
  "name": "Leave Application",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
