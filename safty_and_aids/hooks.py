@@ -220,6 +220,7 @@ doctype_js = {
 	"Lead" : "public/lead.js",
 	"Maintenance Visit" : "public/maintenance_visit.js",
 	"Quotation" : "public/quotation.js",
-	"Contract" : "public/contract.js"
+	"Contract" : "public/contract.js",
+	"Customer Group" : "public/customer_group.js"
 }
 required_apps = ['erpnext']
