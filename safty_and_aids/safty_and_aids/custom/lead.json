@@ -13,7 +13,7 @@
    "columns": 0,
    "creation": "2024-10-27 17:58:05.271991",
    "default": null,
-   "depends_on": "eval:doc.custom_is_site_visit_required == 1;",
+   "depends_on": "",
    "description": null,
    "docstatus": 0,
    "dt": "Lead",

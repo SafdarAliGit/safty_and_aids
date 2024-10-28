@@ -1,0 +1,61 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-10-28 17:55:08.050838",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "is_working",
+  "qty",
+  "description_english",
+  "description_arabic",
+  "sr_no"
+ ],
+ "fields": [
+  {
+   "default": "Yes",
+   "fieldname": "is_working",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Working",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Qty"
+  },
+  {
+   "fieldname": "description_english",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Description English"
+  },
+  {
+   "fieldname": "description_arabic",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description Arabic"
+  },
+  {
+   "fieldname": "sr_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Sr No"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-10-28 18:18:00.678944",
+ "modified_by": "Administrator",
+ "module": "Safty And Aids",
+ "name": "Site Visit Item First",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

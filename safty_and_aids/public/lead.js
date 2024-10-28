@@ -3,25 +3,9 @@ frappe.ui.form.on('Lead', {
         frm.fields_dict['custom_site_visit'].input.onclick = () => {
             frappe.route_options = {
                 'customer': frm.doc.custom_customer,
-                'customer_type': frm.doc.custom_customer_type,
-                'customer_group': frm.doc.custom_customer_group,
                 'lead_name': frm.doc.lead_name,
-                'lead_owner': frm.doc.lead_owner,
-                'business_name': frm.doc.business_name,
-                'job_title': frm.doc.job_title,
-                'status': frm.doc.status,
-                'salutation': frm.doc.salutation,
-                'gender': frm.doc.gender,
-                'first_name': frm.doc.first_name,
-                'source': frm.doc.source,
-                'lead_type': frm.doc.lead_type,
-                'middle_name': frm.doc.middle_name,
-                'vat_number': frm.doc.vat_number,
-                'request_type': frm.doc.request_type,
-                'last_name': frm.doc.last_name,
-                'cr_number': frm.doc.cr_number,
-                'sales_person': frm.doc.custom_sales_person,
-                'bank_account_name': frm.doc.bank_account_name,
+                'lead_id':frm.doc.name,
+                'phone': frm.doc.phone,
 
             };
             frappe.set_route('Form', 'Site Visit', 'new-site-visit');
