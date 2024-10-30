@@ -1,13 +1,15 @@
 frappe.ui.form.on("Site Visit", {
     onload(frm) {
-        // Run the fill_first_child function on form load
-        fill_first_child(frm);
-        fill_second_child(frm);
+        if (frm.is_new()) {
+            fill_first_child(frm);
+            fill_second_child(frm);
+        }
     },
     refresh(frm) {
-        // Optionally, you could also call it on refresh if needed
-        fill_first_child(frm);
-        fill_second_child(frm);
+        if (frm.is_new()) {
+            fill_first_child(frm);
+            fill_second_child(frm);
+        }
     }
 });
 
