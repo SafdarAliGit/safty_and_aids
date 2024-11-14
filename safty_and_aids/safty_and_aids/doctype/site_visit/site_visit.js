@@ -32,8 +32,8 @@ function fill_child_tables(frm) {
                     let newRow = frm.add_child("site_visit_item_first");
 
                     // Populate the fields in the new row
-                    newRow.description_english = item.custom_arabic_name;
-                    newRow.description_arabic = item.item_code;
+                    newRow.description_english = item.item_code;
+                    newRow.description_arabic = item.custom_arabic_name;
                     newRow.sr_no = item.pb_name;
                 });
 
