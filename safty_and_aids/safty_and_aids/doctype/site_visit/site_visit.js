@@ -5,7 +5,10 @@ frappe.ui.form.on("Site Visit", {
         }
     },
     refresh(frm) {
-        make_quotation(frm);
+        if (frm.doc.docstatus === 1) {
+            make_quotation(frm);
+        }
+
 
         if (frm.is_new()) {
             fill_child_tables
