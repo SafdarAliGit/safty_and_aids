@@ -46,3 +46,38 @@ def get_total_from_quotation(**args):
         return {
             "total": 0,
         }
+
+
+# @frappe.whitelist()
+# def fetch_item_for_quotation(**args):
+#     ids_first = frappe.parse_json(args.get('ids_first'))
+#     pbi_name_tuple = tuple(i["pbi_name"] for i in ids_first if i["pbi_name"])
+#     item_code_tuple = tuple(d["item_code"] for d in ids_first if not d["pbi_name"])
+#
+#     if not pbi_name_tuple:
+#         return ()
+#
+#     parent_tuple = frappe.db.sql("""
+#         SELECT DISTINCT parent
+#         FROM `tabProduct Bundle Item`
+#         WHERE `name` IN %s
+#     """, (pbi_name_tuple,))
+#
+#     single_dimension_parent_tuple = tuple(item[0] for item in parent_tuple)
+#
+#     product_bundle_child_items = frappe.db.sql("""
+#             SELECT item_code,custom_arabic_name,uom
+#             FROM `tabProduct Bundle Item`
+#             WHERE `parent` IN %s
+#             ORDER BY name DESC
+#         """, (single_dimension_parent_tuple,),as_dict=True)
+#
+#     items = frappe.db.sql("""
+#                 SELECT item_code,custom_item_name_arabic AS custom_arabic_name,stock_uom AS uom
+#                 FROM `tabItem`
+#                 WHERE `item_code` IN %s
+#             """, (item_code_tuple,), as_dict=True)
+#
+#     combined_items = product_bundle_child_items + items
+#
+#     return combined_items

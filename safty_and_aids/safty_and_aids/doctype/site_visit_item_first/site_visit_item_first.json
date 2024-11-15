@@ -11,7 +11,8 @@
   "qty",
   "description_english",
   "description_arabic",
-  "sr_no"
+  "sr_no",
+  "product_bundle_item"
  ],
  "fields": [
   {
@@ -51,12 +52,18 @@
    "fieldtype": "Small Text",
    "in_list_view": 1,
    "label": "Remarks"
+  },
+  {
+   "fieldname": "product_bundle_item",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Product Bundle Item"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-10-29 16:13:02.413636",
+ "modified": "2024-11-14 10:12:37.897700",
  "modified_by": "Administrator",
  "module": "Safty And Aids",
  "name": "Site Visit Item First",
