@@ -128,12 +128,11 @@ function make_quotation(frm) {
         // }
 
         frappe.route_options = {
-            quotation_to: "Customer",
-            party_name: frm.doc.customer,
+            quotation_to: frm.doc.customer,
             custom_site_visit: frm.doc.name,
         };
 
-        frappe.set_route("Form", "Quotation", "new");
+        frappe.set_route("Form", "Quotation", "new-quotation");
     });
 }
 
