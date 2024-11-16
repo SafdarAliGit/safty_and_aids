@@ -1,12 +1,6 @@
 frappe.ui.form.on('Quotation', {
     refresh(frm) {
         // your code here
-    },
-    onload: function (frm) {
-        if (frappe.route_options) {
-            frm.set_value('party_name', frappe.route_options.party_name);
-            // delete frappe.route_options.party_name;
-        }
     }
 })
 

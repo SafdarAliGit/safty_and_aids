@@ -7,15 +7,18 @@ frappe.ui.form.on("Site Visit", {
     refresh(frm) {
         if (frm.doc.docstatus === 1) {
             frm.add_custom_button('Make Quotation', function () {
-                frappe.route_options = {
-                    quotation_to: "Customer",
-                    party_name: frm.doc.customer,
-                    custom_site_visit: frm.doc.name,
-                    company: frm.doc.company,
-
-                };
-
-                frappe.set_route("Form", "Quotation", "new-quotation");
+                frappe.call({
+                    method: 'site_visit.site_visit.doctype.site_visit.make_quotation',
+                    args: {
+                        'source_name': frm.doc.name
+                    },
+                    callback: function (r) {
+                        if (!r.exc) {
+                            frappe.model.sync(r.message);
+                            frappe.set_route("Form", r.message.doctype, r.message.name);
+                        }
+                    }
+                });
             });
 
         }

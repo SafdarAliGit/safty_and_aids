@@ -101,3 +101,15 @@ def fetch_fire_fighting_system_items():
         data.update({"second": []})
 
     return data
+
+
+@frappe.whitelist()
+def make_quotation(source_name):
+    source_doctype = frappe.get_doc("Site Visist", source_name)
+    doc = frappe.new_doc("Quotation")
+    doc.quotation_to: "Customer"
+    doc.party_name: source_name.customer
+    doc.custom_site_visit: source_doctype.name
+    doc.company: source_doctype.company
+
+    return doc
