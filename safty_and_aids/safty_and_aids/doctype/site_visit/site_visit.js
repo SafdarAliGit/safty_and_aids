@@ -131,6 +131,8 @@ function make_quotation(frm) {
             quotation_to: "Customer",
             party_name: frm.doc.customer,
             custom_site_visit: frm.doc.name,
+            company: frm.doc.company,
+
         };
 
         frappe.set_route("Form", "Quotation", "new-quotation");

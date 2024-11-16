@@ -6,6 +6,7 @@ frappe.ui.form.on('Lead', {
                 'lead_name': frm.doc.lead_name,
                 'lead_id':frm.doc.name,
                 'phone': frm.doc.phone,
+                'company': frm.doc.company,
 
             };
             frappe.set_route('Form', 'Site Visit', 'new-site-visit');
