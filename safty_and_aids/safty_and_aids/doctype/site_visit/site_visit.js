@@ -128,7 +128,7 @@ function make_quotation(frm) {
         // }
 
         frappe.route_options = {
-            party_name: frm.doc.customer,
+            quotation_to: frm.doc.customer,
             custom_site_visit: frm.doc.name,
         };
 
