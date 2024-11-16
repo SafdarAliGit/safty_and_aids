@@ -105,7 +105,7 @@ def fetch_fire_fighting_system_items():
 
 @frappe.whitelist()
 def make_quotation(source_name):
-    source_doctype = frappe.get_doc("Site Visist", source_name)
+    source_doctype = frappe.get_doc("Site Visit", source_name)
     doc = frappe.new_doc("Quotation")
     doc.quotation_to: "Customer"
     doc.party_name: source_name.customer
