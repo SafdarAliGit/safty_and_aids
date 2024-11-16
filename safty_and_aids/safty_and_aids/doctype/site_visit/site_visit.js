@@ -6,7 +6,18 @@ frappe.ui.form.on("Site Visit", {
     },
     refresh(frm) {
         if (frm.doc.docstatus === 1) {
-            make_quotation(frm);
+            frm.add_custom_button('Make Quotation', function () {
+                frappe.route_options = {
+                    quotation_to: "Customer",
+                    party_name: frm.doc.customer,
+                    custom_site_visit: frm.doc.name,
+                    company: frm.doc.company,
+
+                };
+
+                frappe.set_route("Form", "Quotation", "new-quotation");
+            });
+
         }
 
 
@@ -72,71 +83,63 @@ function fill_child_tables(frm) {
 
 function make_quotation(frm) {
     // Add a custom button to run the function
-    frm.add_custom_button('Make Quotation', function () {
-        // Access the child table first
-        // let childTableFirst = frm.doc.site_visit_item_first;
-        // let descriptions_first = [];
+    // frm.add_custom_button('Make Quotation', function () {
+    // Access the child table first
+    // let childTableFirst = frm.doc.site_visit_item_first;
+    // let descriptions_first = [];
 
-        // Loop through each row in the child table first
-        // childTableFirst.forEach(row => {
-        //     // Check if 'is_working' is set to the desired value (e.g., 'Yes')
-        //     if (row.is_working === 1) {
-        //         // Add the 'description_english' value to the descriptions array
-        //         descriptions_first.push({item_code: row.description_english, pbi_name: row.product_bundle_item});
-        //     }
-        // });
+    // Loop through each row in the child table first
+    // childTableFirst.forEach(row => {
+    //     // Check if 'is_working' is set to the desired value (e.g., 'Yes')
+    //     if (row.is_working === 1) {
+    //         // Add the 'description_english' value to the descriptions array
+    //         descriptions_first.push({item_code: row.description_english, pbi_name: row.product_bundle_item});
+    //     }
+    // });
 
-        // Access the child table first
-        // let childTableSecond = frm.doc.site_visit_item_second;
-        // let descriptions_second = [];
+    // Access the child table first
+    // let childTableSecond = frm.doc.site_visit_item_second;
+    // let descriptions_second = [];
 
-        // Loop through each row in the child table first
-        // childTableSecond.forEach(row => {
-        //     // Check if 'is_working' is set to the desired value (e.g., 'Yes')
-        //     if (row.is_working === 1) {
-        //         // Add the 'description_english' value to the descriptions array
-        //         descriptions_second.push({item_code: row.description_english});
-        //     }
-        // });
+    // Loop through each row in the child table first
+    // childTableSecond.forEach(row => {
+    //     // Check if 'is_working' is set to the desired value (e.g., 'Yes')
+    //     if (row.is_working === 1) {
+    //         // Add the 'description_english' value to the descriptions array
+    //         descriptions_second.push({item_code: row.description_english});
+    //     }
+    // });
 
-        // Use the descriptions as needed
-        // if (descriptions_first.length > 0 || descriptions_second.length > 0) {
-        //
-        //     frappe.call({
-        //         method: "safty_and_aids.utils.fetch_item_for_quotation",
-        //         args: {
-        //             ids_first: descriptions_first,
-        //             ids_second: descriptions_second
-        //         },
-        //         callback: function (response) {
-        //             if (response.message) {
-        //                 console.log(response);
-        //             }
-        //         },
-        //         error: function (error) {
-        //             frappe.msgprint({
-        //                 title: __('Error'),
-        //                 indicator: 'red',
-        //                 message: __('Failed to send data to the server.')
-        //             });
-        //         }
-        //     });
-        //
-        //
-        // } else {
-        //     frappe.msgprint("No working sites found.");
-        // }
+    // Use the descriptions as needed
+    // if (descriptions_first.length > 0 || descriptions_second.length > 0) {
+    //
+    //     frappe.call({
+    //         method: "safty_and_aids.utils.fetch_item_for_quotation",
+    //         args: {
+    //             ids_first: descriptions_first,
+    //             ids_second: descriptions_second
+    //         },
+    //         callback: function (response) {
+    //             if (response.message) {
+    //                 console.log(response);
+    //             }
+    //         },
+    //         error: function (error) {
+    //             frappe.msgprint({
+    //                 title: __('Error'),
+    //                 indicator: 'red',
+    //                 message: __('Failed to send data to the server.')
+    //             });
+    //         }
+    //     });
+    //
+    //
+    // } else {
+    //     frappe.msgprint("No working sites found.");
+    // }
 
-        frappe.route_options = {
-            quotation_to: "Customer",
-            party_name: frm.doc.customer,
-            custom_site_visit: frm.doc.name,
-            company: frm.doc.company,
 
-        };
-
-        frappe.set_route("Form", "Quotation", "new-quotation");
-    });
+    // });
 }
 
 
