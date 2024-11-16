@@ -2,6 +2,12 @@ frappe.ui.form.on('Quotation', {
     refresh(frm) {
         // your code here
     },
+    onload: function (frm) {
+        if (frappe.route_options) {
+            frm.set_value('party_name', frappe.route_options.party_name);
+            delete frappe.route_options.party_name;
+        }
+    }
 })
 
 frappe.ui.form.on('Quotation Item', {
@@ -15,7 +21,7 @@ frappe.ui.form.on('Quotation Item', {
                 },
                 callback: function (response) {
                     if (response.message) {
-                          frappe.model.set_value(cdt, cdn, "custom_total_qty", flt(response.message.pb_count) * flt(row.qty || 1));
+                        frappe.model.set_value(cdt, cdn, "custom_total_qty", flt(response.message.pb_count) * flt(row.qty || 1));
                     } else {
                         frappe.msgprint(__('Record not found for Item: {0}', [row.item_code]));
                     }
@@ -33,7 +39,7 @@ frappe.ui.form.on('Quotation Item', {
                 },
                 callback: function (response) {
                     if (response.message) {
-                          frappe.model.set_value(cdt, cdn, "custom_total_qty", flt(response.message.pb_count) * flt(row.qty || 1));
+                        frappe.model.set_value(cdt, cdn, "custom_total_qty", flt(response.message.pb_count) * flt(row.qty || 1));
                     } else {
                         frappe.msgprint(__('Record not found for Item: {0}', [row.item_code]));
                     }
