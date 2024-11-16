@@ -8,7 +8,7 @@ frappe.ui.form.on("Site Visit", {
         if (frm.doc.docstatus === 1) {
             frm.add_custom_button('Make Quotation', function () {
                 frappe.call({
-                    method: 'site_visit.site_visit.doctype.site_visit.make_quotation',
+                    method: 'safty_and_aids.safty_and_aids.doctype.site_visit.site_visit.make_quotation',
                     args: {
                         'source_name': frm.doc.name
                     },
