@@ -51,8 +51,9 @@
   {
    "default": "None",
    "fieldname": "lead_id",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "Lead ID",
+   "options": "Lead",
    "read_only": 1
   },
   {
@@ -122,7 +123,7 @@
    "link_fieldname": "custom_site_visit"
   }
  ],
- "modified": "2024-11-16 11:26:57.885872",
+ "modified": "2024-11-17 16:49:45.026111",
  "modified_by": "Administrator",
  "module": "Safty And Aids",
  "name": "Site Visit",

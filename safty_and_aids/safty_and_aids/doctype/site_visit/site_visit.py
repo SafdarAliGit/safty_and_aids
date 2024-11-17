@@ -107,9 +107,8 @@ def fetch_fire_fighting_system_items():
 def make_quotation(source_name):
     source_doctype = frappe.get_doc("Site Visit", source_name)
     doc = frappe.new_doc("Quotation")
-    doc.quotation_to: "Customer"
-    doc.customer_name: source_name.customer
-    doc.custom_site_visit: source_doctype.name
-    doc.company: source_doctype.company
-
+    doc.quotation_to = "Customer"
+    doc.party_name = source_doctype.customer
+    doc.custom_site_visit = source_doctype.name
+    doc.company = source_doctype.company
     return doc

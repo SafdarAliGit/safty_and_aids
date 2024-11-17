@@ -55,6 +55,7 @@ function fill_child_tables(frm) {
                     newRow.description_arabic = item.custom_arabic_name;
                     newRow.sr_no = item.pb_name;
                     newRow.product_bundle_item = item.pbi_name;
+
                 });
 
                 // Refresh the child table to display the new rows
