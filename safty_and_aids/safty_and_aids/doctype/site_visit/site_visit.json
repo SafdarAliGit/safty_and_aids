@@ -11,6 +11,8 @@
   "column_break_ndzc",
   "lead_id",
   "column_break_c6us",
+  "date",
+  "column_break_4ebr",
   "customer",
   "column_break_0doe",
   "phone",
@@ -38,8 +40,7 @@
    "fieldname": "customer",
    "fieldtype": "Link",
    "label": "Customer",
-   "options": "Customer",
-   "read_only": 1
+   "options": "Customer"
   },
   {
    "default": "None",
@@ -113,6 +114,16 @@
    "fieldtype": "Link",
    "label": "Company",
    "options": "Company"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_4ebr",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -123,7 +134,7 @@
    "link_fieldname": "custom_site_visit"
   }
  ],
- "modified": "2024-11-17 16:49:45.026111",
+ "modified": "2024-11-24 14:22:17.402132",
  "modified_by": "Administrator",
  "module": "Safty And Aids",
  "name": "Site Visit",
