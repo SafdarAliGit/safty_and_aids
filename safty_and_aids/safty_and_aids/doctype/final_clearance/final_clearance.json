@@ -104,7 +104,7 @@
   },
   {
    "fieldname": "signature",
-   "fieldtype": "Data",
+   "fieldtype": "Signature",
    "label": "Signature"
   },
   {
@@ -177,7 +177,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-09-18 20:51:52.386029",
+ "modified": "2024-11-26 22:05:30.540694",
  "modified_by": "Administrator",
  "module": "Safty And Aids",
  "name": "Final Clearance",
