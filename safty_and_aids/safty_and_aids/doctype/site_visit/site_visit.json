@@ -23,7 +23,13 @@
   "section_break_5i0h",
   "site_visit_item_second",
   "section_break_zrcw",
-  "notes"
+  "notes",
+  "section_break_dzyw",
+  "signature",
+  "column_break_yo0x",
+  "mobile_number",
+  "column_break_4ktx",
+  "system_works_fine"
  ],
  "fields": [
   {
@@ -124,6 +130,34 @@
   {
    "fieldname": "column_break_4ebr",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_dzyw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "Signature",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "column_break_4ktx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "system_works_fine",
+   "fieldtype": "Check",
+   "label": "System Works Fine?"
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "label": "Mobile Number"
+  },
+  {
+   "fieldname": "column_break_yo0x",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -134,7 +168,7 @@
    "link_fieldname": "custom_site_visit"
   }
  ],
- "modified": "2024-11-24 14:22:17.402132",
+ "modified": "2024-12-24 07:33:34.285560",
  "modified_by": "Administrator",
  "module": "Safty And Aids",
  "name": "Site Visit",
