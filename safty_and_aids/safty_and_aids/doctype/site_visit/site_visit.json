@@ -14,8 +14,6 @@
   "date",
   "column_break_4ebr",
   "customer",
-  "column_break_0doe",
-  "phone",
   "column_break_abtp",
   "company",
   "section_break_bemd",
@@ -64,22 +62,11 @@
    "read_only": 1
   },
   {
-   "default": "None",
-   "fieldname": "phone",
-   "fieldtype": "Data",
-   "label": "Phone",
-   "read_only": 1
-  },
-  {
    "fieldname": "column_break_ndzc",
    "fieldtype": "Column Break"
   },
   {
    "fieldname": "column_break_c6us",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_0doe",
    "fieldtype": "Column Break"
   },
   {
@@ -168,7 +155,7 @@
    "link_fieldname": "custom_site_visit"
   }
  ],
- "modified": "2024-12-24 07:33:34.285560",
+ "modified": "2024-12-29 12:00:52.653399",
  "modified_by": "Administrator",
  "module": "Safty And Aids",
  "name": "Site Visit",

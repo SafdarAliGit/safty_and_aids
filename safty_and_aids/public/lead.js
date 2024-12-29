@@ -5,7 +5,7 @@ frappe.ui.form.on('Lead', {
                 'customer': frm.doc.custom_customer,
                 'lead_name': frm.doc.lead_name,
                 'lead_id':frm.doc.name,
-                'phone': frm.doc.mobile_no,
+                'mobile_number': frm.doc.mobile_no,
                 'company': frm.doc.company,
 
             };
