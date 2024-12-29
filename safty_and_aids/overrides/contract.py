@@ -1,6 +1,6 @@
 def save(doc, method):
     doctype_name = doc.doctype
-    if doc.language == "Arabic":
+    if doc.custom_language == "Arabic":
         print_format_name = "Contract-Ar PF"
     else:
         print_format_name = "Contract-Eng PF"
