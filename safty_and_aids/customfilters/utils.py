@@ -1,9 +1,6 @@
 from hijri_converter import Gregorian
 from datetime import datetime
 
-from hijri_converter import Gregorian
-from datetime import datetime
-
 def gregorian_to_hijri(date):
     if date:
         # Check if the input is a datetime.date object
@@ -16,5 +13,5 @@ def gregorian_to_hijri(date):
 
         # Convert Gregorian date to Hijri
         hijri_date = Gregorian(g_date.year, g_date.month, g_date.day).to_hijri()
-        return f"{hijri_date.year}-{hijri_date.month}-{hijri_date.day}"
+        return hijri_date
     return ""
