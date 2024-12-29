@@ -1,3 +1,4 @@
+import frappe
 def save(doc, method):
     doctype_name = doc.doctype
     if doc.custom_language == "Arabic":
