@@ -1,4 +1,11 @@
 frappe.ui.form.on('Contract', {
+    onload: function(frm) {
+        if (frm.doc.language === "Arabic") {
+            frm.set_value('Contract-Ar PF');
+        } else{
+            frm.set_value('Contract-Eng PF');
+        }
+    },
     refresh(frm) {
         // your code here
     },
