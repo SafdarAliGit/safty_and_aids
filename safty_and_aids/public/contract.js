@@ -1,10 +1,4 @@
 frappe.ui.form.on('Contract', {
-    before_print: function (frm) {
-        if (frm.doc.language === "Arabic") {
-            frm.meta.default_print_format = "Contract-Ar PF";
-        }
-
-    },
     refresh(frm) {
         // your code here
     },
