@@ -121,10 +121,8 @@ app_license = "MIT"
 doc_events = {
 	"Quotation": {
 		"before_insert": "safty_and_aids.overrides.quotation.before_insert",
-	},
-"Contract": {
-		"before_save": "safty_and_aids.overrides.contract.save",
 	}
+
 }
 
 # Scheduled Tasks
