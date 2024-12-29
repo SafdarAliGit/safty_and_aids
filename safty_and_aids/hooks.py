@@ -55,10 +55,10 @@ app_license = "MIT"
 # ----------
 
 # add methods and filters to jinja environment
-# jinja = {
-#	"methods": "safty_and_aids.utils.jinja_methods",
-#	"filters": "safty_and_aids.utils.jinja_filters"
-# }
+jinja = {
+	# "methods": "safty_and_aids.utils.jinja_methods",
+	"filters": "safty_and_aids.customfilters.utils.gregorian_to_hijri"
+}
 
 # Installation
 # ------------
@@ -113,7 +113,11 @@ app_license = "MIT"
 # override_doctype_class = {
 #	"ToDo": "custom_app.overrides.CustomToDo"
 # }
-
+# jenv = {
+#     'filters': {
+#         'gregorian_to_hijri': "safty_and_aids.utils.gregorian_to_hijri.gregorian_to_hijri",
+#     }
+# }
 # Document Events
 # ---------------
 # Hook on document methods and events
