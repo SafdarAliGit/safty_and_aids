@@ -55,10 +55,10 @@ app_license = "MIT"
 # ----------
 
 # add methods and filters to jinja environment
-jinja = {
-	# "methods": "safty_and_aids.utils.jinja_methods",
-	"filters": "safty_and_aids.customfilters.utils.gregorian_to_hijri"
-}
+# jinja = {
+# 	# "methods": "safty_and_aids.utils.jinja_methods",
+# 	"filters": "safty_and_aids.customfilters.utils.gregorian_to_hijri"
+# }
 
 # Installation
 # ------------
@@ -125,6 +125,9 @@ jinja = {
 doc_events = {
 	"Quotation": {
 		"before_insert": "safty_and_aids.overrides.quotation.before_insert",
+	},
+	"Contract": {
+		"before_save": "safty_and_aids.overrides.contract.before_save",
 	}
 
 }
