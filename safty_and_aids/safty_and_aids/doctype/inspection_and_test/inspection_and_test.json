@@ -1,0 +1,617 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-02-18 14:51:39.879738",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_k9ja",
+  "amended_from",
+  "naming_series",
+  "customer",
+  "column_break_iqds",
+  "inspection_type",
+  "visit_type",
+  "last_inspection_date",
+  "last_maintenance_date",
+  "last_test_date",
+  "section_break_czft",
+  "maintenance_schedule",
+  "column_break_sflg",
+  "maintenance_date_of_schedule",
+  "status_of_maintenance",
+  "item_detail",
+  "schedules_section",
+  "schedules",
+  "company_details_section",
+  "company",
+  "pre_inspection__test_requirements_and_actions_section",
+  "type_of_operation",
+  "clean_agent",
+  "locationareaunit",
+  "pump_manufacturermodel",
+  "column_break_awxq",
+  "water_supply_source_info",
+  "aplication",
+  "main_power_supply",
+  "controller_manufacturermodel",
+  "column_break_jzrh",
+  "water_tank_info",
+  "type_of_detection",
+  "back_up_power_supply",
+  "rated_capacity",
+  "column_break_sgqj",
+  "type_of_water",
+  "type_of_circuit_wiring",
+  "rated_pressure",
+  "water_supply_source",
+  "section_break_ujab",
+  "customer_feedback",
+  "column_break_ijjz",
+  "tab_2_tab",
+  "fire_hydrant_section",
+  "confirm_hydran_is_accessible",
+  "hydrant_cotrol_valve_is_open",
+  "water_supply_is_available",
+  "column_break_jmwo",
+  "hydrant_is_in_good_condition_no_damage_leaks_or_cracks",
+  "operating_nut_is_not_worn_out_and_doesnt_have_round_corners",
+  "outlet_threads_are_free_of_damage",
+  "column_break_vpxs",
+  "fire_monitor_is_attached",
+  "tightness_for_outlet_caps_is_normal",
+  "fire_monitor_is_free_of_damage_and_leaks",
+  "automatic_deluge_system_section",
+  "collect_ptw",
+  "inform_cro_and_fcr",
+  "column_break_tzmz",
+  "use_appropriate_ppe",
+  "maintain_good_houskeeping",
+  "column_break_viln",
+  "comply_to_ptw_procedure",
+  "type_of_operation_section",
+  "pneumatic",
+  "column_break_woxc",
+  "electric",
+  "column_break_bhbw",
+  "hydraulic",
+  "column_break_swhm",
+  "fusible_link",
+  "water_supply_source_section",
+  "city_main",
+  "column_break_uygu",
+  "water_tank",
+  "column_break_lgnl",
+  "fire_dep_connection",
+  "water_tank_section",
+  "aboveground",
+  "column_break_zddp",
+  "underground",
+  "column_break_kqbb",
+  "overhead",
+  "type_of_water_section",
+  "raw",
+  "column_break_ooyf",
+  "potable",
+  "column_break_vlhl",
+  "sea_water"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_k9ja",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Inspection and Test",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "inspection_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Inspection Type",
+   "options": "\nFire Hydrant\nDeluge System\nFire Extinguishers\nAutomatic Sprikler System\nFire Hose Reels\nFire Suppression\nElectric Pump",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "visit_type",
+   "fieldtype": "Select",
+   "label": "Visit Type",
+   "options": "\nInspection\nMaintenance\nTest",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_inspection_date",
+   "fieldtype": "Date",
+   "label": "Last Inspection Date"
+  },
+  {
+   "fieldname": "last_maintenance_date",
+   "fieldtype": "Date",
+   "label": "Last Maintenance Date"
+  },
+  {
+   "fieldname": "last_test_date",
+   "fieldtype": "Date",
+   "label": "Last Test Date"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "INTE-.YYYY.-"
+  },
+  {
+   "fieldname": "fire_hydrant_section",
+   "fieldtype": "Section Break",
+   "label": "Fire Hydrant"
+  },
+  {
+   "default": "0",
+   "fieldname": "confirm_hydran_is_accessible",
+   "fieldtype": "Check",
+   "label": "Confirm hydran is accessible "
+  },
+  {
+   "default": "0",
+   "fieldname": "hydrant_cotrol_valve_is_open",
+   "fieldtype": "Check",
+   "label": "Hydrant cotrol valve is open"
+  },
+  {
+   "default": "0",
+   "fieldname": "water_supply_is_available",
+   "fieldtype": "Check",
+   "label": "Water supply is available"
+  },
+  {
+   "fieldname": "column_break_jmwo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "hydrant_is_in_good_condition_no_damage_leaks_or_cracks",
+   "fieldtype": "Check",
+   "label": "Hydrant is in good condition, no damage, leaks, or cracks"
+  },
+  {
+   "default": "0",
+   "fieldname": "operating_nut_is_not_worn_out_and_doesnt_have_round_corners",
+   "fieldtype": "Check",
+   "label": "Operating nut is not worn out and doesn't have round corners"
+  },
+  {
+   "default": "0",
+   "fieldname": "outlet_threads_are_free_of_damage",
+   "fieldtype": "Check",
+   "label": "Outlet threads are free of damage"
+  },
+  {
+   "fieldname": "column_break_vpxs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fire_monitor_is_attached",
+   "fieldtype": "Check",
+   "label": "Fire monitor is attached"
+  },
+  {
+   "default": "0",
+   "fieldname": "tightness_for_outlet_caps_is_normal",
+   "fieldtype": "Check",
+   "label": "Tightness for outlet caps is normal"
+  },
+  {
+   "default": "0",
+   "fieldname": "fire_monitor_is_free_of_damage_and_leaks",
+   "fieldtype": "Check",
+   "label": "Fire monitor is free of damage and leaks"
+  },
+  {
+   "fieldname": "automatic_deluge_system_section",
+   "fieldtype": "Section Break",
+   "label": "Automatic Deluge System"
+  },
+  {
+   "default": "0",
+   "fieldname": "collect_ptw",
+   "fieldtype": "Check",
+   "label": "Collect PTW"
+  },
+  {
+   "fieldname": "tab_2_tab",
+   "fieldtype": "Tab Break",
+   "label": "Inspection Details"
+  },
+  {
+   "default": "0",
+   "fieldname": "comply_to_ptw_procedure",
+   "fieldtype": "Check",
+   "label": "Comply to PTW Procedure"
+  },
+  {
+   "default": "0",
+   "fieldname": "inform_cro_and_fcr",
+   "fieldtype": "Check",
+   "label": "Inform CRO and FCR"
+  },
+  {
+   "default": "0",
+   "fieldname": "use_appropriate_ppe",
+   "fieldtype": "Check",
+   "label": "Use appropriate PPE"
+  },
+  {
+   "default": "0",
+   "fieldname": "maintain_good_houskeeping",
+   "fieldtype": "Check",
+   "label": "Maintain Good Houskeeping"
+  },
+  {
+   "fieldname": "column_break_tzmz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_viln",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "type_of_operation_section",
+   "fieldtype": "Section Break",
+   "label": "Type of operation"
+  },
+  {
+   "default": "0",
+   "fieldname": "pneumatic",
+   "fieldtype": "Check",
+   "label": "Pneumatic"
+  },
+  {
+   "fieldname": "column_break_woxc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "electric",
+   "fieldtype": "Check",
+   "label": "Electric"
+  },
+  {
+   "fieldname": "column_break_bhbw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "hydraulic",
+   "fieldtype": "Check",
+   "label": "hydraulic"
+  },
+  {
+   "fieldname": "column_break_swhm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "fusible_link",
+   "fieldtype": "Check",
+   "label": "Fusible link"
+  },
+  {
+   "fieldname": "water_supply_source_section",
+   "fieldtype": "Section Break",
+   "label": "Water Supply Source"
+  },
+  {
+   "default": "0",
+   "fieldname": "city_main",
+   "fieldtype": "Check",
+   "label": "City Main"
+  },
+  {
+   "default": "0",
+   "fieldname": "water_tank",
+   "fieldtype": "Check",
+   "label": "Water tank"
+  },
+  {
+   "default": "0",
+   "fieldname": "fire_dep_connection",
+   "fieldtype": "Check",
+   "label": "Fire Dep. Connection"
+  },
+  {
+   "fieldname": "column_break_uygu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_lgnl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "water_tank_section",
+   "fieldtype": "Section Break",
+   "label": "Water Tank"
+  },
+  {
+   "default": "0",
+   "fieldname": "aboveground",
+   "fieldtype": "Check",
+   "label": "Aboveground"
+  },
+  {
+   "fieldname": "column_break_zddp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "underground",
+   "fieldtype": "Check",
+   "label": "Underground"
+  },
+  {
+   "fieldname": "column_break_kqbb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "overhead",
+   "fieldtype": "Check",
+   "label": "Overhead"
+  },
+  {
+   "fieldname": "type_of_water_section",
+   "fieldtype": "Section Break",
+   "label": "Type of Water"
+  },
+  {
+   "default": "0",
+   "fieldname": "raw",
+   "fieldtype": "Check",
+   "label": "Raw"
+  },
+  {
+   "fieldname": "column_break_ooyf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "potable",
+   "fieldtype": "Check",
+   "label": "Potable"
+  },
+  {
+   "fieldname": "column_break_vlhl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "sea_water",
+   "fieldtype": "Check",
+   "label": "Sea Water"
+  },
+  {
+   "fieldname": "pre_inspection__test_requirements_and_actions_section",
+   "fieldtype": "Section Break",
+   "label": "Pre Inspection / Test Requirements and Actions"
+  },
+  {
+   "fieldname": "type_of_operation",
+   "fieldtype": "Select",
+   "label": "TYPE OF OPERATION",
+   "options": "\nPneumatic\nElectric\nHydraulic\nFusible Link"
+  },
+  {
+   "fieldname": "clean_agent",
+   "fieldtype": "Select",
+   "label": "CLEAN AGENT",
+   "options": "\nFM-200\nHalon\nNOVEC 101\nIG55"
+  },
+  {
+   "fieldname": "locationareaunit",
+   "fieldtype": "Select",
+   "label": "Location/Area/Unit",
+   "options": "\nAddressable\nConventional"
+  },
+  {
+   "fieldname": "pump_manufacturermodel",
+   "fieldtype": "Select",
+   "label": "Pump Manufacturer/Model",
+   "options": "\nAddressable\nConventional"
+  },
+  {
+   "fieldname": "column_break_awxq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "water_supply_source_info",
+   "fieldtype": "Select",
+   "label": "WATER SUPPLY SOURCE Info",
+   "options": "\nCity Main\nWater Tank\nFire Dept. Connection"
+  },
+  {
+   "fieldname": "aplication",
+   "fieldtype": "Select",
+   "label": "Aplication",
+   "options": "Local Application.\nTotal Flooding\nMobile\nOthers_______"
+  },
+  {
+   "fieldname": "main_power_supply",
+   "fieldtype": "Select",
+   "label": "Main Power Supply",
+   "options": "\n220VAC\n120VAC\nOthers"
+  },
+  {
+   "fieldname": "controller_manufacturermodel",
+   "fieldtype": "Data",
+   "label": "Controller Manufacturer/Model"
+  },
+  {
+   "fieldname": "column_break_jzrh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "water_tank_info",
+   "fieldtype": "Select",
+   "label": "Water Tank Info",
+   "options": "\nAboveground\nUnderground\nOverhead"
+  },
+  {
+   "fieldname": "type_of_detection",
+   "fieldtype": "Select",
+   "label": "Type Of Detection",
+   "options": "\nSingle Zone\nCross Zone\n2 Detectors any Zone\nManual Release Only"
+  },
+  {
+   "fieldname": "back_up_power_supply",
+   "fieldtype": "Select",
+   "label": "Back up Power Supply",
+   "options": "\nSealed Lead Acid\nNi-Cad\nOthers"
+  },
+  {
+   "fieldname": "rated_capacity",
+   "fieldtype": "Data",
+   "label": "Rated Capacity",
+   "options": "\nSealed Lead Acid\nNi-Cad\nOthers"
+  },
+  {
+   "fieldname": "column_break_sgqj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "type_of_water",
+   "fieldtype": "Select",
+   "label": "Type Of Water",
+   "options": "\nRaw\nPotable\nSea Water"
+  },
+  {
+   "fieldname": "type_of_circuit_wiring",
+   "fieldtype": "Select",
+   "label": "Type Of Circuit Wiring",
+   "options": "\nClass A\nClass B"
+  },
+  {
+   "fieldname": "rated_pressure",
+   "fieldtype": "Data",
+   "label": "Rated Pressure",
+   "options": "\nClass A\nClass B"
+  },
+  {
+   "fieldname": "water_supply_source",
+   "fieldtype": "Data",
+   "label": "Water Supply Source",
+   "options": "\nClass A\nClass B"
+  },
+  {
+   "fieldname": "section_break_ujab",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "customer_feedback",
+   "fieldtype": "Text",
+   "label": "Customer Feedback"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "section_break_czft",
+   "fieldtype": "Section Break",
+   "label": "Maintenance Details"
+  },
+  {
+   "fieldname": "status_of_maintenance",
+   "fieldtype": "Data",
+   "label": "Status of Maintenance"
+  },
+  {
+   "fieldname": "item_detail",
+   "fieldtype": "Data",
+   "label": "Item Detail"
+  },
+  {
+   "fieldname": "schedules_section",
+   "fieldtype": "Section Break",
+   "label": "Schedules"
+  },
+  {
+   "fieldname": "schedules",
+   "fieldtype": "Table",
+   "label": "Schedules",
+   "options": "Inspection Schedule Detail"
+  },
+  {
+   "fieldname": "column_break_iqds",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "maintenance_date_of_schedule",
+   "fieldtype": "Data",
+   "label": "Maintenance Schedule Date"
+  },
+  {
+   "fieldname": "column_break_sflg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "maintenance_schedule",
+   "fieldtype": "Data",
+   "label": "Maintenance Schedule"
+  },
+  {
+   "fieldname": "company_details_section",
+   "fieldtype": "Section Break",
+   "label": "Company Details"
+  },
+  {
+   "fieldname": "column_break_ijjz",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-02-25 23:55:48.804140",
+ "modified_by": "Administrator",
+ "module": "Safty And Aids",
+ "name": "Inspection and Test",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
